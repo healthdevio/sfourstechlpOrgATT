@@ -10,8 +10,10 @@ export interface CardAvatarProps {
 export function CardAvatar({ image, name, role }: CardAvatarProps) {
     return (
         <div className="relative flex gap-4">
-            <div className="flex h-14 w-14 overflow-hidden rounded-full">
+            <div className="flex overflow-hidden rounded-full">
                 <Image
+                    width={56}
+                    height={56}
                     src={image}
                     alt={`imagem da pessoa que fez o depoimento: ${name}`}
                 />
