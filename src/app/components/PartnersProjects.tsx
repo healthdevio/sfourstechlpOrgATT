@@ -4,6 +4,8 @@ import React, { useRef, useState } from 'react';
 import SaudeHDThumbnail from '@/app/components/images/saudeHd.jpg';
 import FiiboThumbnail from '@/app/components/images/fiibo.jpg';
 import ElegeBrThumbnail from '@/app/components/images/elegeBr.jpg';
+import MPROThumbnail from '@/app/components/images/mpro.jpg';
+import CreaThumbnail from '@/app/components/images/crea.jpg';
 import Image from 'next/image';
 import GrayArrowIcon from './icons/grayArrow';
 import YellowArrowIcon from './icons/yellowArrow';
@@ -81,45 +83,48 @@ const PartnersProjects: React.FC = () => {
       ]
     },
     {
-      name: "??????",
+      name: "Ministério Público do Estado de Rondonia",
       description: "Somos especialistas em impulsionar o valor dos negócios através de soluções sob medida, abrangendo desde Inteligência Artificial até.",
-      thumbnail: ElegeBrThumbnail,
-      partnerPage: "https://elegebr.com.br/",
+      thumbnail: MPROThumbnail,
+      partnerPage: "https://www.mpro.mp.br",
       tags: [
         {
-          nameTag: "???",
+          nameTag: "Desenvolvimento",
         },
         {
-          nameTag: "???",
+          nameTag: "Design",
+        },
+        {
+          nameTag: "Mobile",
         },
       ]
     },
     {
-      name: "??????",
+      name: "CREA-CE",
       description: "Somos especialistas em impulsionar o valor dos negócios através de soluções sob medida, abrangendo desde Inteligência Artificial até.",
-      thumbnail: ElegeBrThumbnail,
-      partnerPage: "https://elegebr.com.br/",
+      thumbnail: CreaThumbnail,
+      partnerPage: "https://www.creace.org.br/",
       tags: [
         {
-          nameTag: "???",
+          nameTag: "Desenvolvimento",
         },
         {
-          nameTag: "???",
+          nameTag: "Design",
         },
       ]
     },
   ]
 
   return (
-    <div className='w-full flex flex-col px-24 mb-24 border-t border-[#232323]'>
-      <div className='w-full flex items-center justify-between mb-20 mt-10'>
+    <div className='w-full flex flex-col px-24 mb-24 mt-10 border-t border-[#232323]'>
+      <div className='w-full flex items-center mb-20 mt-10 justify-between'>
         <div className='cursor-pointer' onClick={() => scrollProjects('left')}>
           <GrayArrowIcon />
         </div>
 
         <div className='flex items-center gap-2'>
           <div className={`transition-all duration-300 ease-in-out w-${clickCount >= 1 ? '6' : '3'} h-[2px] ${clickCount === 1 ? 'bg-[#F19C1C]' : 'bg-[#F19C1C]/[32%]'}`} />
-          <div className={`transition-all duration-300 ease-in-out w-${clickCount === 2 ? '6' : '3'} h-[2px] ${clickCount === 2 ? 'bg-[#F19C1C]' : 'bg-[#F19C1C]/[32%]'}`} />
+          <div className={`transition-all duration-300 ease-in-out w-${clickCount >= 2 ? '6' : '3'} h-[2px] ${clickCount === 2 ? 'bg-[#F19C1C]' : 'bg-[#F19C1C]/[32%]'}`} />
           <div className={`transition-all duration-300 ease-in-out w-${clickCount >= 3 ? '6' : '3'} h-[2px] ${clickCount === 3 ? 'bg-[#F19C1C]' : 'bg-[#F19C1C]/[32%]'}`} />
         </div>
 
