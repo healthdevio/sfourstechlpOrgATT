@@ -1,10 +1,16 @@
 import Link from 'next/link';
+import Image from 'next/image'
+import logo from '@/assets/arrow-1.svg'
 
 export default function Header() {
   return (
     <header className="w-full p-4 bg-blue-600 text-white flex items-center justify-between">
       <div className="flex items-center">
-        <img src="/logo.svg" alt="Logo" className="w-20 h-8 mr-4" />
+        <Image 
+            className="ml-[30px] pb-[5px] pt-[5px]"
+            alt='S4s nossa tecnologia está nas pessoas'
+            src={logo}
+        />
       </div>
       <nav className="flex gap-4">
         <Link href="/inicio" legacyBehavior>
