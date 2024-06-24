@@ -86,7 +86,7 @@ const PartnersProjects: React.FC = () => {
       name: "Ministério Público do Estado de Rondonia",
       description: "Somos especialistas em impulsionar o valor dos negócios através de soluções sob medida, abrangendo desde Inteligência Artificial até.",
       thumbnail: MPROThumbnail,
-      partnerPage: "https://elegebr.com.br/",
+      partnerPage: "https://www.mpro.mp.br",
       tags: [
         {
           nameTag: "Desenvolvimento",
@@ -103,7 +103,7 @@ const PartnersProjects: React.FC = () => {
       name: "CREA-CE",
       description: "Somos especialistas em impulsionar o valor dos negócios através de soluções sob medida, abrangendo desde Inteligência Artificial até.",
       thumbnail: CreaThumbnail,
-      partnerPage: "https://elegebr.com.br/",
+      partnerPage: "https://www.creace.org.br/",
       tags: [
         {
           nameTag: "Desenvolvimento",
