@@ -16,7 +16,7 @@ export function ColumnFooter({ linksArray, title }: Props) {
             <ul className="flex flex-col gap-4">
                 {
                     linksArray.map((link, index) => (
-                        <li key={index}>
+                        <li className="hover:text-white" key={index}>
                             <Link
                                 href={link.link}
                             >
