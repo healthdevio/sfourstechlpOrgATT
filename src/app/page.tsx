@@ -2,6 +2,7 @@ import Header from './components/header';
 import HomeScreen from './components/HomeScreen';
 import TopFooter from './components/TopFooter';
 import Footer from './components/footer/Footer';
+import PartnersProjects from './components/PartnersProjects';
 import { DepositionsSection } from './components/depositions/DepositionsSection';
 import TabsSection from './components/tabs-section';
 
@@ -15,6 +16,7 @@ export default function Home() {
         <p className="mt-4 text-lg">Sua fábrica de software de confiança</p>
         <TabsSection />
       </main>
+      <PartnersProjects/>
       <DepositionsSection />
       <TopFooter />
       <Footer />
