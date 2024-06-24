@@ -62,8 +62,9 @@ export function DepositionsSection() {
                 </div>
             </div>
 
-            <div>
+            <div className='flex relative items-end justify-end'>
                 <Image
+                    className='-mb-24 -mr-10'
                     src={dollImage}
                     alt='Imagem de uma boneca com megafone'
                 />
