@@ -35,7 +35,7 @@ export default function Footer() {
             />
           </Link>
           <Link
-            href={'#'}
+            href={'https://www.linkedin.com/company/s4stech/mycompany/'}
           >
             <Image
               src={iconSocialImageIn}
@@ -43,7 +43,7 @@ export default function Footer() {
             />
           </Link>
           <Link
-            href={'#'}
+            href={'https://www.instagram.com/s4s.tech/'}
           >
             <Image
               src={iconSocialImageIg}
