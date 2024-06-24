@@ -4,6 +4,8 @@ import React, { useRef, useState } from 'react';
 import SaudeHDThumbnail from '@/app/components/images/saudeHd.jpg';
 import FiiboThumbnail from '@/app/components/images/fiibo.jpg';
 import ElegeBrThumbnail from '@/app/components/images/elegeBr.jpg';
+import MPROThumbnail from '@/app/components/images/mpro.jpg';
+import CreaThumbnail from '@/app/components/images/crea.jpg';
 import Image from 'next/image';
 import GrayArrowIcon from './icons/grayArrow';
 import YellowArrowIcon from './icons/yellowArrow';
@@ -81,30 +83,33 @@ const PartnersProjects: React.FC = () => {
       ]
     },
     {
-      name: "??????",
+      name: "Ministério Público do Estado de Rondonia",
       description: "Somos especialistas em impulsionar o valor dos negócios através de soluções sob medida, abrangendo desde Inteligência Artificial até.",
-      thumbnail: ElegeBrThumbnail,
+      thumbnail: MPROThumbnail,
       partnerPage: "https://elegebr.com.br/",
       tags: [
         {
-          nameTag: "???",
+          nameTag: "Desenvolvimento",
         },
         {
-          nameTag: "???",
+          nameTag: "Design",
+        },
+        {
+          nameTag: "Mobile",
         },
       ]
     },
     {
-      name: "??????",
+      name: "CREA-CE",
       description: "Somos especialistas em impulsionar o valor dos negócios através de soluções sob medida, abrangendo desde Inteligência Artificial até.",
-      thumbnail: ElegeBrThumbnail,
+      thumbnail: CreaThumbnail,
       partnerPage: "https://elegebr.com.br/",
       tags: [
         {
-          nameTag: "???",
+          nameTag: "Desenvolvimento",
         },
         {
-          nameTag: "???",
+          nameTag: "Design",
         },
       ]
     },
