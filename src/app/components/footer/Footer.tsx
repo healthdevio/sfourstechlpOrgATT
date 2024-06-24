@@ -21,7 +21,7 @@ export default function Footer() {
             Startups
           </div>
         </div>
-        <div className="">
+        <div className="font-WorkSans">
           s4S 2020 <br />
           Todos os direitos reservados
         </div>
