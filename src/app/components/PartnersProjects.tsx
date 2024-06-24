@@ -111,15 +111,15 @@ const PartnersProjects: React.FC = () => {
   ]
 
   return (
-    <div className='w-full flex flex-col px-24 mb-24 border-t border-[#232323]'>
-      <div className='w-full flex items-center justify-between mb-20 mt-10'>
+    <div className='w-full flex flex-col px-24 mb-24 mt-10 border-t border-[#232323]'>
+      <div className='w-full flex items-center mb-20 mt-10 justify-between'>
         <div className='cursor-pointer' onClick={() => scrollProjects('left')}>
           <GrayArrowIcon />
         </div>
 
         <div className='flex items-center gap-2'>
           <div className={`transition-all duration-300 ease-in-out w-${clickCount >= 1 ? '6' : '3'} h-[2px] ${clickCount === 1 ? 'bg-[#F19C1C]' : 'bg-[#F19C1C]/[32%]'}`} />
-          <div className={`transition-all duration-300 ease-in-out w-${clickCount === 2 ? '6' : '3'} h-[2px] ${clickCount === 2 ? 'bg-[#F19C1C]' : 'bg-[#F19C1C]/[32%]'}`} />
+          <div className={`transition-all duration-300 ease-in-out w-${clickCount >= 2 ? '6' : '3'} h-[2px] ${clickCount === 2 ? 'bg-[#F19C1C]' : 'bg-[#F19C1C]/[32%]'}`} />
           <div className={`transition-all duration-300 ease-in-out w-${clickCount >= 3 ? '6' : '3'} h-[2px] ${clickCount === 3 ? 'bg-[#F19C1C]' : 'bg-[#F19C1C]/[32%]'}`} />
         </div>
 
