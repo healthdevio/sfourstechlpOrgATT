@@ -62,9 +62,13 @@ export function DepositionsSection() {
                 </div>
             </div>
 
-            <div className='flex relative items-end justify-end'>
+            <div className='flex flex-col relative items-end justify-end gap-12'>
+                <div className='text-base font-normal text-right text-[#7B7B7B]'>
+                    Designers e desenvolvedores trabalhando lado a lado para <br/>
+                    entregarmos um projeto mais eficiente e completo!
+                </div>
                 <Image
-                    className='-mb-24 -mr-10'
+                    className='-mb-24 -mr-20'
                     src={dollImage}
                     alt='Imagem de uma boneca com megafone'
                 />
