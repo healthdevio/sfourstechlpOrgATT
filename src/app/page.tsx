@@ -52,10 +52,6 @@ export default function Home() {
 
 
   return (
-    <div>
-      <Header />
-      <HomeScreen />
-      <CarrouselPartne/> 
     <div className="scroll-smooth">
       <div className='xs:hidden md:block'>
         <Header />
@@ -63,8 +59,8 @@ export default function Home() {
       <div className='xs:block md:hidden'>
         <MobileHeader />
       </div>
-      <HomeScreen/> 
-      <CarrouselPartne/>
+      <HomeScreen />
+      <CarrouselPartne />
       <main className="min-h-screen flex flex-col justify-center items-center">
         <div id="nos" ref={usRef}>
           <AboutSection />
@@ -82,7 +78,6 @@ export default function Home() {
           <DepositionsSection />
         </div>
         <TopFooter />
-         <Footer /> 
 
         <div className='xs:hidden md:block'>
           <Footer />
@@ -93,6 +88,5 @@ export default function Home() {
         </div>
       </main>
     </div>
-</div>
   );
 }
