@@ -3,26 +3,15 @@ import { WorkWithOptions } from "./WorkWithOptions"
 import exampleImageVideo from "@/assets/images/image-video-example.png"
 import { PlayIcon } from "../icons/PlayIcon"
 import Link from "next/link"
-import rectangleImage from '@/../public/rectangle.svg'
-import rectangleMImage from '@/assets/images/rectangle-m.svg'
+import { TitleSection } from "../TitleSection"
 
 export function AboutSection() {
     return (
         <section className="relative flex flex-col md:grid md:grid-cols-12 w-full bg-[#111111] md:pl-24 py-14 md:py-0 border-b border-b-[#232323]">
             <div className="relative col-span-7 py-24">
-                <div className='flex uppercase mb-11 text-base font-semibold gap-5'>
-                    <Image
-                        className="hidden md:block"
-                        src={rectangleImage}
-                        alt='#'
-                    />
-                    <Image
-                        className="md:hidden"
-                        src={rectangleMImage}
-                        alt='#'
-                    />
-                    Quem somos?
-                </div>
+                <TitleSection
+                    title="Quem somos?"
+                />
                 <div className="flex flex-col mb-24 px-6 md:px-0 gap-10">
                     <div className="font-semibold text-[2.5rem] leading-[33px] md:leading-[60px] text-white">
                         Temos o compromisso de simplificar <br className="hidden md:block" />

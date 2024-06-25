@@ -5,23 +5,18 @@ import itConsultingImage from '@/assets/images/services/ti-consulting.png'
 import uxuiImage from '@/assets/images/services/uxui-design.png'
 import developmentImage from '@/assets/images/services/development.png'
 import iaImage from '@/assets/images/services/ia.png'
+import { TitleSection } from '../TitleSection'
 
 export function OurServicesSection() {
     return (
-        <section className='w-full bg-[#0A0A0B] p-24'>
-            <div className='flex uppercase mb-11 text-base font-semibold gap-5'>
-                <Image
-                    src={rectangleImage}
-                    alt='#'
-                />
-                Nossos Serviços
-            </div>
-            <div className='flex justify-between items-center mb-24'>
+        <section className='w-full bg-[#0A0A0B] py-14 md:p-24'>
+            <TitleSection title='Nossos Serviços'/>
+            <div className='flex flex-col md:flex-row justify-between items-center mb-24'>
                 <div className='text-[2.5rem] font-semibold leading-[60px]'>
                     Serviços projetados para <br />
                     acelerar sua produção.
                 </div>
-                <div className='text-base font-normal text-right text-[#7B7B7B]'>
+                <div className='text-base font-normal text-left md:text-right text-[#7B7B7B]'>
                     Soluções de alto padrão e moldadas de acordo com <br />
                     a sua necessidadae.
                 </div>

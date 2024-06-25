@@ -12,17 +12,17 @@ import TabsSection from './components/tabs-section/tabs-section';
 export default function Home() {
   return (
     <div>
-      <Header />
+      {/* <Header />
       <HomeScreen />
-      <CarrouselPartne/>
+      <CarrouselPartne/> */}
       <main className="min-h-screen flex flex-col justify-center items-center">
         <AboutSection />
-        <PartnersProjects />
+        {/* <PartnersProjects /> */}
         <OurServicesSection />
-        <TabsSection />
+        {/* <TabsSection />
         <DepositionsSection />
         <TopFooter />
-        <Footer />
+        <Footer /> */}
       </main>
     </div>
   );
