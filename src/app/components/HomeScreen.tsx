@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function HomeScreen() {
     return (
-        <div className="pt-20 pb-20">
+        <div className="pt-[165px] pb-20">
             <div className="flex justify-center items-center">
                 <div className="border-[1px] border-[#222222] rounded-full pt-[16px] pb-[16px] pl-[6px] pr-[80px] text-center">
                     <span className="text-base/[16px] text-center font-semibold text-[#1F1F1F] bg-[#E19322] rounded-full pt-[12px] pb-[12px] pl-[34px] pr-[34px] font-WorkSans">Olá!</span>
