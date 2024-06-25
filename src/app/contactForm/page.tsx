@@ -9,9 +9,11 @@ import Image from 'next/image';
 import GenericImage from '../components/images/genericPhoto.jpg';
 import Link from 'next/link';
 import S4sLogoIcon from '../components/icons/s4sLogo';
+import emailJs from "@emailjs/browser"
 
 import MobileHeader from '../components/MobileHeader';
 import MobileFooter from '../components/MobileFooter';
+import { Toaster, toast } from 'sonner';
 
 const ContactForm: React.FC = () => {
   const [clientName, setClientName] = React.useState<string>('')
@@ -21,6 +23,7 @@ const ContactForm: React.FC = () => {
   const [projectStage, setProjectStage] = React.useState<string>('')
   const [projectDevelopmentTime, setProjectDevelopmentTime] = React.useState<string>('')
   const [projectDescription, setProjectDescription] = React.useState<string>('')
+  const [privacityPolicy, setPrivacityPolicy] = React.useState<boolean>(false)
 
   const projectTime = [
     {
@@ -42,8 +45,46 @@ const ContactForm: React.FC = () => {
     return maskedNumber.length > 15 ? maskedNumber.substring(0, 15) : maskedNumber;
   }
 
+  async function sendEmail() {
+    if (clientName === '' || clientEmail === '' || clientPhone === '' || clientCompany === '' || projectStage === '' || projectDevelopmentTime === '' || projectDescription === '') {
+      toast.warning('Preencha todos os campos para enviar o formulário');
+      return;
+    }
+
+    if (!privacityPolicy) {
+      toast.warning('Aceite a politica de privacidade para enviar o formulário');
+      return;
+    }
+
+    try {
+      emailJs.send('service_f51bo06', 'template_0buumkx', {
+        from_name: clientName,
+        from_email: clientEmail,
+        from_phone: clientPhone,
+        from_company: clientCompany,
+        project_stage: projectStage,
+        project_development_time: projectDevelopmentTime,
+        message: projectDescription,
+      }, '0GGNCQMZt2YTxATct')
+      toast.success('Formulário enviado com sucesso');
+      setClientName('')
+      setClientEmail('')
+      setClientPhone('')
+      setClientCompany('')
+      setProjectStage('')
+      setProjectDevelopmentTime('')
+      setProjectDescription('')
+    } catch (error) {
+      console.log('error', error)
+    }
+  }
+
   return (
     <div className='w-full h-sreen'>
+      <Toaster
+        position='top-right'
+        richColors
+      />
       <div className='xs:hidden md:block'>
         <div className='w-full h-sreen flex pt-8 pb-8 px-0 bg-[#121214]'>
           <div className='min-w-[30rem] flex flex-col justify-between h-screen ml-8 px-11 py-14 bg-[#0A0A0B] rounded-lg'>
@@ -95,20 +136,20 @@ const ContactForm: React.FC = () => {
               <Link
                 href='/'
               >
-                <p className='text-[#909090] text-sm cursor-pointer hover:text-[#F19C1C] transition-colors duration-100'>Home</p>
+                <p className='text-[#909090] text-base cursor-pointer hover:text-[#F19C1C] transition-colors duration-100'>Home</p>
               </Link>
               <Link href="/?scrollTo=ourServices">
-                <p className='text-[#909090] text-sm cursor-pointer hover:text-[#F19C1C] transition-colors duration-100'>O que fazemos</p>
+                <p className='text-[#909090] text-base cursor-pointer hover:text-[#F19C1C] transition-colors duration-100'>O que fazemos</p>
               </Link>
               <Link
                 href="/?scrollTo=Opnions"
               >
-                <p className='text-[#909090] text-sm cursor-pointer hover:text-[#F19C1C] transition-colors duration-100'>Depoimentos</p>
+                <p className='text-[#909090] text-base cursor-pointer hover:text-[#F19C1C] transition-colors duration-100'>Depoimentos</p>
               </Link>
               <Link
                 href='/?scrollTo=Us'
               >
-                <p className='text-[#909090] text-sm cursor-pointer hover:text-[#F19C1C] transition-colors duration-100'>Quem somos</p>
+                <p className='text-[#909090] text-base cursor-pointer hover:text-[#F19C1C] transition-colors duration-100'>Quem somos</p>
               </Link>
             </div>
 
@@ -221,11 +262,16 @@ const ContactForm: React.FC = () => {
             <div className='mt-16 px-14'>
               <div className='flex items-center justify-between'>
                 <div className='flex items-center'>
-                  <Checkbox className='size-3' />
-                  <p className='text-[#909090] ml-3 text-sm'>Li e aceito a <span className='text-[#F19C1C] cursor-pointer'>politica de privacidade</span></p>
+                  <Checkbox
+                    checked={privacityPolicy}
+                    onCheckedChange={() => setPrivacityPolicy(!privacityPolicy)}
+                    className='size-4' />
+                  <p className='text-[#909090] ml-3 text-base'>Li e aceito a <span className='text-[#F19C1C] cursor-pointer'>politica de privacidade</span></p>
                 </div>
 
-                <button className='w-40 h-14 bg-[#F19C1C] text-[#1F1F1F]'>
+                <button
+                  onClick={sendEmail}
+                  className='w-40 h-14 bg-[#F19C1C] text-[#1F1F1F]'>
                   <p className='font-medium text-sm'>ENVIAR</p>
                 </button>
               </div>
