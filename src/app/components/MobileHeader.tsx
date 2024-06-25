@@ -30,12 +30,14 @@ const MobileHeader: React.FC = () => {
   return (
     <div className='w-full'>
       <div className='w-full flex px-7 justify-between items-center h-20 border-b bg-[#121214] border-[#232323]'>
-        <Image
-          width={90}
-          height={0}
-          alt='S4s nossa tecnologia está nas pessoas'
-          src={logo}
-        />
+        <Link href='/'>
+          <Image
+            width={90}
+            height={0}
+            alt='S4s nossa tecnologia está nas pessoas'
+            src={logo}
+          />
+        </Link>
         <button onClick={toggleMenu}>
           {headerIsOpened ? <X /> : <MenuIcon />}
         </button>
