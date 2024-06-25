@@ -7,6 +7,8 @@ import Input from '../components/ui/Input';
 import { Checkbox } from '../components/ui/Checkbox';
 import Image from 'next/image';
 import GenericImage from '../components/images/genericPhoto.jpg';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const ContactForm: React.FC = () => {
   const projectTime = [
@@ -65,10 +67,24 @@ const ContactForm: React.FC = () => {
 
         <div className='w-full'>
           <div className='flex justify-end gap-14 mt-6 mr-14'>
-            <p className='text-[#909090] text-sm cursor-pointer hover:text-[#F19C1C] transition-colors duration-100'>Home</p>
-            <p className='text-[#909090] text-sm cursor-pointer hover:text-[#F19C1C] transition-colors duration-100'>O que fazemos</p>
+            <Link
+              href='/'
+            >
+              <p className='text-[#909090] text-sm cursor-pointer hover:text-[#F19C1C] transition-colors duration-100'>Home</p>
+            </Link>
+            <Link href="/?scrollTo=ourServices">
+              <p className='text-[#909090] text-sm cursor-pointer hover:text-[#F19C1C] transition-colors duration-100'>O que fazemos</p>
+            </Link>
+            <Link
+              href="/?scrollTo=Opnions"
+            >       
             <p className='text-[#909090] text-sm cursor-pointer hover:text-[#F19C1C] transition-colors duration-100'>Depoimentos</p>
+            </Link>
+            <Link
+              href='/?scrollTo=Us'
+            >
             <p className='text-[#909090] text-sm cursor-pointer hover:text-[#F19C1C] transition-colors duration-100'>Quem somos</p>
+            </Link>
           </div>
 
           <div className='mt-16 px-14'>
