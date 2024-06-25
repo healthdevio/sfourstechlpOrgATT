@@ -4,7 +4,7 @@ interface Props {
   className?: string;
 }
 
-const EnergyIcon: React.FC<Props> = ({ className }) => {
+const MagnifyingGlassIcon: React.FC<Props> = ({ className }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -29,4 +29,4 @@ const EnergyIcon: React.FC<Props> = ({ className }) => {
   );
 };
 
-export default EnergyIcon;
+export default MagnifyingGlassIcon;
