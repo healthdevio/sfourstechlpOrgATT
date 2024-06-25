@@ -6,6 +6,7 @@ import PartnersProjects from './components/PartnersProjects';
 import { DepositionsSection } from './components/depositions/DepositionsSection';
 import TabsSection from './components/tabs-section';
 import { AboutSection } from './components/about/AboutSection';
+import { OurServicesSection } from './components/our-services/OurServicesSection';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <main className="min-h-screen flex flex-col justify-center items-center">
         <AboutSection />
         <PartnersProjects />
+        <OurServicesSection />
         <TabsSection />
         <DepositionsSection />
         <TopFooter />
