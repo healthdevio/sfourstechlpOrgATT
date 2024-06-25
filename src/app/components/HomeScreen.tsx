@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import arrow2 from '@/assets/arrow-2.svg'
-import play from '@/assets/play.svg'
+import { PlayIcon } from './icons/PlayIcon';
 
 export default function HomeScreen(){
     return (
@@ -33,11 +33,8 @@ export default function HomeScreen(){
                     </button>
                     <button className="border border-[#FFFFFF] font-bold py-2 px-4 rounded-full flex items-center space-x-2">
                         <span className="font-WorkSans text-[16px] text-[#FFFF] leading-[28px] font-medium">Assista ao vídeo</span>
-                        <Image 
-                            className="ml-[30px] pb-[5px] pt-[5px]"
-                            alt='Assista essa demonstração'
-                            src={play}
-                        />
+                        <PlayIcon
+                        color='#FFFFFF'/>
                     </button>
                 </div>
             </div>
