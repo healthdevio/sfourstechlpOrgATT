@@ -1,4 +1,7 @@
+"use client";
+
 import * as Tabs from '@radix-ui/react-tabs';
+import { useState } from 'react';
 import EnergyIcon from '../icons/energyIcon';
 import MagnifyingGlassIcon from '../icons/magnifying-glass';
 import BookMountain from '../icons/bookMountain';
@@ -12,6 +15,12 @@ import { TabsHeader } from './tabs-header';
 import Link from 'next/link';
 
 export default function TabsSection() {
+  const [activeTab, setActiveTab] = useState('kickoff');
+
+  const handleTabChange = (value: string) => {
+    setActiveTab(value);
+  };
+
   return (
     <section className="bg-[#111111] w-full px-4 md:px-8 lg:px-16 xl:px-36">
       <TabsHeader />
@@ -55,7 +64,7 @@ export default function TabsSection() {
           <hr className='border-[#232323]' />
         </div>
         <div className="hidden md:block">
-          <Tabs.Root defaultValue="kickoff" orientation="vertical">
+          <Tabs.Root value={activeTab} onValueChange={handleTabChange} orientation="vertical">
             <Tabs.List className="flex space-x-4 border-b-2 border-[#434343]">
               <TabItem value="kickoff" icon={EnergyIcon} label="Kickoff" />
               <TabItem value="discovery" icon={MagnifyingGlassIcon} label="Discovery" />
@@ -97,9 +106,7 @@ export default function TabsSection() {
         </div>
       </div>
       <div>
-        <Link
-          href="/contactForm"
-        >
+        <Link href="/contactForm">
           <button className="hidden md:flex items-center gap-2 bg-[#FF9700] rounded-3xl py-2 px-4 mb-20">
             <p className="text-[#1F1F1F] font-semibold">Iniciar projeto</p>
             <img src="/start-project-icon.svg" alt="" />
