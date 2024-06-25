@@ -5,6 +5,7 @@ import Footer from './components/footer/Footer';
 import PartnersProjects from './components/PartnersProjects';
 import { DepositionsSection } from './components/depositions/DepositionsSection';
 import TabsSection from './components/tabs-section';
+import { AboutSection } from './components/about/AboutSection';
 
 export default function Home() {
   return (
@@ -12,14 +13,15 @@ export default function Home() {
       <Header />
       <HomeScreen />
       <main className="min-h-screen flex flex-col justify-center items-center">
+        <h1 className="text-4xl font-bold">Bem-vindo à S4STECHLP</h1>
+        <p className="mt-4 text-lg">Sua fábrica de software de confiança</p>
+        <AboutSection />
         <PartnersProjects />
         <TabsSection />
+        <DepositionsSection />
+        <TopFooter />
+        <Footer />
       </main>
-     
-      <DepositionsSection />
-      <TopFooter />
-      <Footer />
-      
     </div>
   );
 }
