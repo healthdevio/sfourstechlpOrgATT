@@ -1,6 +1,11 @@
+import Image from 'next/image'
+import arrow2 from '@/assets/arrow-2.svg'
+import play from '@/assets/play.svg'
+import looperbg from '@/assets/looperbg.svg'
+
 export default function HomeScreen(){
     return (
-        <div className="pt-20">
+        <div className="pt-20 bg-looperbg" style={{ backgroundImage: `url(${looperbg})`}}>
             <div className="flex justify-center items-center">
                 <div className="border-[1px] border-[#222222] rounded-full pt-[16px] pb-[16px] pl-[6px] pr-[80px] text-center">
                     <span className="text-base/[16px] text-center font-semibold text-[#1F1F1F] bg-[#E19322] rounded-full pt-[12px] pb-[12px] pl-[34px] pr-[34px] font-WorkSans">Olá!</span>
@@ -20,14 +25,28 @@ export default function HomeScreen(){
                     <button className=" py-2 px-4 rounded-full flex items-center space-x-2">
                         <span className="font-WorkSans text-[16px] text-[#1F1F1F] bg-[#FF9700] leading-[28px] font-medium px-4 rounded-full flex space-x-2 py-2">
                             Iniciar projeto
-                            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </span>
+                            <Image 
+                            className="ml-[16px] pb-[5px] pt-[5px]"
+                            alt='Venha iniciar um projeto conosco'
+                            src={arrow2}
+                            />
+                            </span>
                     </button>
                     <button className="border border-[#FFFFFF] font-bold py-2 px-4 rounded-full flex items-center space-x-2">
                         <span className="font-WorkSans text-[16px] text-[#FFFF] leading-[28px] font-medium">Assista ao vídeo</span>
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197 1.925c-.433.262-.556.833-.279 1.24.256.38.769.482 1.154.246l3.197-1.925c.433-.262.556-.833.279-1.24-.256-.38-.769-.482-1.154-.246z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"></path></svg>
+                        <Image 
+                            className="ml-[30px] pb-[5px] pt-[5px]"
+                            alt='Assista essa demonstração'
+                            src={play}
+                        />
                     </button>
                 </div>
+
+                <Image 
+                            className="ml-[30px] pb-[5px] pt-[5px]"
+                            alt='Assista essa demonstração'
+                            src={looperbg}
+                        />
             </div>
         </div>
     );
