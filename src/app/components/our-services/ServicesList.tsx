@@ -6,7 +6,7 @@ interface Props {
 
 export function ServicesList({ data }: Props) {
     return (
-        <ul className="flex flex-col gap-44">
+        <ul className="flex flex-col gap-20 md:gap-44">
             {
                 data.map(item => (
                     <li key={item.code}>
