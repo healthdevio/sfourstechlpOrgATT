@@ -2,11 +2,12 @@ import Image from 'next/image'
 import arrow2 from '@/assets/arrow-2.svg'
 import { PlayIcon } from './icons/PlayIcon';
 import { LinkArrowIcon } from './icons/LinkArrowIcon';
+import LopeerBg from '@/assets/looperbg.svg'
 import Link from 'next/link';
 
 export default function HomeScreen() {
     return (
-        <div className="pt-[165px] pb-20">
+        <div className="pt-[165px] pb-20" style={{ backgroundImage: `url(${LopeerBg.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className="flex justify-center items-center">
                 <div className="border-[1px] border-[#222222] rounded-full pt-[16px] pb-[16px] pl-[6px] pr-[80px] text-center">
                     <span className="text-base/[16px] text-center font-semibold text-[#1F1F1F] bg-[#E19322] rounded-full pt-[12px] pb-[12px] pl-[34px] pr-[34px] font-WorkSans">Olá!</span>
@@ -23,18 +24,18 @@ export default function HomeScreen() {
             </div>
             <div className="pt-[56px]">
                 <div className="flex justify-center items-center">
-                    <Link className=" py-2 px-4 rounded-full flex items-center space-x-2 hover:text-[#FF9700]" href="/contactForm">
-                        <span className="font-WorkSans text-[16px] text-[#1F1F1F] bg-yellowbutton leading-[28px] font-medium px-4 rounded-full flex space-x-2 py-2 hover:bg-[#FF9700]">
+                    <Link className="py-2 px-4 rounded-full flex items-center space-x-2" href="/contactForm">
+                        <span className="font-WorkSans text-[16px] text-[#1F1F1F] bg-yellowbutton leading-[28px] font-medium px-4 rounded-full flex space-x-2 py-2 hover:bg-[#FF9700] transition-colors duration-300">
                             Iniciar projeto
                             <div className="ml-[16px] pb-[5px] pt-[5px]">
-                            <LinkArrowIcon />
+                                <LinkArrowIcon />
                             </div>
                         </span>
                     </Link>
-                    <Link className="border border-[#FFFFFF] font-bold py-2 px-4 rounded-full flex items-center space-x-2" href='/'>
+
+                    <Link className="border border-[#FFFFFF] font-bold py-2 px-4 rounded-full flex items-center space-x-2" href='https://www.instagram.com/s4s.tech/reels/'>
                         <span className="font-WorkSans text-[16px] text-[#FFFF] leading-[28px] font-medium">Assista ao vídeo</span>
-                        <PlayIcon
-                            color='#FFFFFF' />
+                        <PlayIcon color='#FFFFFF' />
                     </Link>
                 </div>
             </div>

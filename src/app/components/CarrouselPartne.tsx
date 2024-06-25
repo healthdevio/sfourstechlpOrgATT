@@ -24,7 +24,6 @@ export function CarrouselPartne() {
         fiibo,
         knola,
         totalCross,
-        liv,
         topyou,
         byteme,
         inside,
