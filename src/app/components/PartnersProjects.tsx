@@ -1,7 +1,7 @@
 'use client';
 import React, { useRef, useState } from 'react';
 
-import SaudeHDThumbnail from '@/app/components/images/saudeHd.jpg';
+import SaudeHDThumbnail from '@/assets/saudehd.png';
 import FiiboThumbnail from '@/app/components/images/fiibo.jpg';
 import ElegeBrThumbnail from '@/app/components/images/elegeBr.jpg';
 import MPROThumbnail from '@/app/components/images/mpro.jpg';
