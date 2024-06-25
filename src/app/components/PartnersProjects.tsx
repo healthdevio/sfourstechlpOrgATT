@@ -115,6 +115,10 @@ const PartnersProjects: React.FC = () => {
     },
   ]
 
+  function getWidthClass(indicatorNumber: number, clickCount: number) {
+    return `transition-all duration-300 ease-in-out ${clickCount >= indicatorNumber ? 'w-6' : 'w-3'} h-[2px] ${clickCount == indicatorNumber ? 'bg-[#FF9700]' : 'bg-[#FF9700]/[32%]'} rounded-full`;
+  }
+
   return (
     <div className='w-full flex flex-col px-24 mb-24 mt-10 border-t border-[#232323]'>
       <div className='w-full flex items-center mb-20 mt-10 justify-between'>
@@ -123,9 +127,9 @@ const PartnersProjects: React.FC = () => {
         </div>
 
         <div className='flex items-center gap-2'>
-          <div className={`transition-all duration-300 ease-in-out w-${clickCount >= 1 ? '6' : '3'} h-[2px] ${clickCount === 1 ? 'bg-[#F19C1C]' : 'bg-[#F19C1C]/[32%]'}`} />
-          <div className={`transition-all duration-300 ease-in-out w-${clickCount >= 2 ? '6' : '3'} h-[2px] ${clickCount === 2 ? 'bg-[#F19C1C]' : 'bg-[#F19C1C]/[32%]'}`} />
-          <div className={`transition-all duration-300 ease-in-out w-${clickCount >= 3 ? '6' : '3'} h-[2px] ${clickCount === 3 ? 'bg-[#F19C1C]' : 'bg-[#F19C1C]/[32%]'}`} />
+          <div className={getWidthClass(1, clickCount)} />
+          <div className={getWidthClass(2, clickCount)} />
+          <div className={getWidthClass(3, clickCount)} />
         </div>
 
         <div className='cursor-pointer' onClick={() => scrollProjects('right')}>
