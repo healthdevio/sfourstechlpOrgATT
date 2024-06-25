@@ -20,7 +20,7 @@
 
 @media screen and (max-width: 768px) {
   html {
-    font-size: 75%;
+    font-size: 75%
   }
 }
 
@@ -38,6 +38,39 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-5%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-down-animation {
+  animation: slide-down 0.2s ease-out forwards;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-5%);
+    opacity: 0;
+  }
+}
+
+.slide-up-animation {
+  animation: slide-up 0.2s ease-out forwards;
 }
 
 @layer utilities {
