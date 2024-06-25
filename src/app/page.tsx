@@ -10,6 +10,8 @@ import { OurServicesSection } from './components/our-services/OurServicesSection
 import { CarrouselPartne } from './components/CarrouselPartne';
 import TabsSection from './components/tabs-section/tabs-section';
 import { useEffect, useRef } from 'react';
+import MobileHeader from './components/MobileHeader';
+import MobileFooter from './components/MobileFooter';
 
 export default function Home() {
   const ourServicesRef = useRef<HTMLDivElement>(null);
@@ -51,7 +53,12 @@ export default function Home() {
 
   return (
     <div className="scroll-smooth">
-      <Header />
+      <div className='xs:hidden md:block'>
+        <Header />
+      </div>
+      <div className='xs:block md:hidden'>
+        <MobileHeader />
+      </div>
       <HomeScreen/> 
       <CarrouselPartne/>
       <main className="min-h-screen flex flex-col justify-center items-center">
@@ -71,7 +78,14 @@ export default function Home() {
           <DepositionsSection />
         </div>
         <TopFooter />
-        <Footer />
+
+        <div className='xs:hidden md:block'>
+          <Footer />
+        </div>
+
+        <div className='xs:block md:hidden'>
+          <MobileFooter />
+        </div>
       </main>
     </div>
   );
