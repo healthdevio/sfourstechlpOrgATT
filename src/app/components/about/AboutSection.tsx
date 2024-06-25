@@ -1,5 +1,7 @@
 import Image from "next/image";
 import rectangleImage from '@/../public/rectangle.svg'
+import { RocketIcon } from "../icons/RocketIcon";
+import { WorkWithOptions } from "./WorkWithOptions";
 
 export function AboutSection() {
     return (
@@ -12,7 +14,7 @@ export function AboutSection() {
                     />
                     Quem somos?
                 </div>
-                <div className="flex flex-col gap-10">
+                <div className="flex flex-col mb-24 gap-10">
                     <div className="font-semibold text-[2.5rem] leading-[60px] text-white">
                         Temos o compromisso de simplificar <br />
                         os desafios do mundo digital.
@@ -24,15 +26,14 @@ export function AboutSection() {
                     </div>
                 </div>
 
-                <div>
-                    <div>Trabalhamos com:</div>
-                    <ul>
-                        <li>
-                            
-                            Consultoria em TI
-                            </li>
-                    </ul>
-                </div>
+                <WorkWithOptions
+                    listItens={[
+                        "Consultoria em TI",
+                        "UX/UI Design",
+                        "Desenvolvimento web",
+                        "Desenvolvimento mobile",
+                    ]}
+                />
 
                 <div className="absolute w-[1px] bg-[#222222] h-full top-0 bottom-0 right-0" />
             </div>
