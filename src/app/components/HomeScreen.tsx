@@ -25,7 +25,9 @@ export default function HomeScreen() {
                     <button className=" py-2 px-4 rounded-full flex items-center space-x-2">
                         <span className="font-WorkSans text-[16px] text-[#1F1F1F] bg-[#FF9700] leading-[28px] font-medium px-4 rounded-full flex space-x-2 py-2">
                             Iniciar projeto
+                            <div className="ml-[16px] pb-[5px] pt-[5px]">
                             <LinkArrowIcon />
+                            </div>
                         </span>
                     </button>
                     <button className="border border-[#FFFFFF] font-bold py-2 px-4 rounded-full flex items-center space-x-2">
