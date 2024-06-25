@@ -6,15 +6,15 @@ import PartnersProjects from './components/PartnersProjects';
 import { DepositionsSection } from './components/depositions/DepositionsSection';
 import TabsSection from './components/tabs-section';
 import { AboutSection } from './components/about/AboutSection';
+import CarrouselPartner from './components/CarrouselPartner';
 
 export default function Home() {
   return (
     <div>
       <Header />
       <HomeScreen />
+      <CarrouselPartner/>
       <main className="min-h-screen flex flex-col justify-center items-center">
-        <h1 className="text-4xl font-bold">Bem-vindo à S4STECHLP</h1>
-        <p className="mt-4 text-lg">Sua fábrica de software de confiança</p>
         <AboutSection />
         <PartnersProjects />
         <TabsSection />
