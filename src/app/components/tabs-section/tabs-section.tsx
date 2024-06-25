@@ -9,6 +9,7 @@ import { TabItem } from './tab-item';
 import { MobileStep } from './mobile-step';
 import { Description } from './tabs-description';
 import { TabsHeader } from './tabs-header';
+import Link from 'next/link';
 
 export default function TabsSection() {
   return (
@@ -96,10 +97,14 @@ export default function TabsSection() {
         </div>
       </div>
       <div>
-        <button className="hidden md:flex items-center gap-2 bg-[#FF9700] rounded-3xl py-2 px-4 mb-20">
-          <p className="text-[#1F1F1F] font-semibold">Iniciar projeto</p>
-          <img src="/start-project-icon.svg" alt="" />
-        </button>
+        <Link
+          href="/contactForm"
+        >
+          <button className="hidden md:flex items-center gap-2 bg-[#FF9700] rounded-3xl py-2 px-4 mb-20">
+            <p className="text-[#1F1F1F] font-semibold">Iniciar projeto</p>
+            <img src="/start-project-icon.svg" alt="" />
+          </button>
+        </Link>
       </div>
     </section>
   );

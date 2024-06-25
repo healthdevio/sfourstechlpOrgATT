@@ -2,6 +2,7 @@ import Image from 'next/image'
 import arrow2 from '@/assets/arrow-2.svg'
 import { PlayIcon } from './icons/PlayIcon';
 import { LinkArrowIcon } from './icons/LinkArrowIcon';
+import Link from 'next/link';
 
 export default function HomeScreen() {
     return (
@@ -22,12 +23,16 @@ export default function HomeScreen() {
             </div>
             <div className="pt-[56px]">
                 <div className="flex justify-center items-center">
-                    <button className=" py-2 px-4 rounded-full flex items-center space-x-2">
-                        <span className="font-WorkSans text-[16px] text-[#1F1F1F] bg-[#FF9700] leading-[28px] font-medium px-4 rounded-full flex space-x-2 py-2">
-                            Iniciar projeto
-                            <LinkArrowIcon />
-                        </span>
-                    </button>
+                    <Link
+                        href="/contactForm"
+                    >
+                        <button className=" py-2 px-4 rounded-full flex items-center space-x-2">
+                            <span className="font-WorkSans text-[16px] text-[#1F1F1F] bg-[#FF9700] leading-[28px] font-medium px-4 rounded-full flex space-x-2 py-2">
+                                Iniciar projeto
+                                <LinkArrowIcon />
+                            </span>
+                        </button>
+                    </Link>
                     <button className="border border-[#FFFFFF] font-bold py-2 px-4 rounded-full flex items-center space-x-2">
                         <span className="font-WorkSans text-[16px] text-[#FFFF] leading-[28px] font-medium">Assista ao vídeo</span>
                         <PlayIcon

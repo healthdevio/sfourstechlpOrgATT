@@ -28,8 +28,8 @@ export function CardServices({ description, image, code, link, title }: CardServ
                     {description}
                 </div>
                     <Link
-                        href={link}
-                        className="flex mr-auto items-center py-2 px-6 bg-yellowbutton text-base font-semibold text-[#1F1F1F] rounded-full gap-4"
+                    href="/contactForm"
+                    className="flex mr-auto items-center py-2 px-6 bg-yellowbutton text-base font-semibold text-[#1F1F1F] rounded-full gap-4"
                     >
                         Iniciar projeto <LinkArrowIcon />
                     </Link>
