@@ -18,6 +18,13 @@ const config: Config = {
         WorkSans: ["Work Sans", "sans-serif;"],
       },
     },
+    screens: {
+      'xs': '360px',
+      'sm': '375px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+    }
   },
   plugins: [],
 };

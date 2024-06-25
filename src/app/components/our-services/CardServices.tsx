@@ -12,8 +12,8 @@ export interface CardServicesProps {
 
 export function CardServices({ description, image, code, link, title }: CardServicesProps) {
     return (
-        <div className="grid grid-cols-2 gap-16">
-            <div className="p-12 rounded-lg bg-[#232323]">
+        <div className="grid md:grid-cols-2 px-6 gap-8 md:gap-16">
+            <div className="p-0 m-0 md:p-12 rounded-lg md:bg-[#232323]">
                 <Image
                     src={image}
                     alt={`Imagem representando o serviço de ${title}`}
@@ -29,7 +29,7 @@ export function CardServices({ description, image, code, link, title }: CardServ
                 </div>
                     <Link
                     href="/contactForm"
-                    className="flex mr-auto items-center py-2 px-6 bg-yellowbutton text-base font-semibold text-[#1F1F1F] rounded-full gap-4"
+                    className="flex mr-auto items-center py-4 md:py-2- px-6 bg-yellowbutton text-base font-semibold text-[#1F1F1F] rounded-full gap-4"
                     >
                         Iniciar projeto <LinkArrowIcon />
                     </Link>

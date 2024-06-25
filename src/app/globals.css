@@ -24,6 +24,12 @@
   }
 }
 
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: 70%;
+  }
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
