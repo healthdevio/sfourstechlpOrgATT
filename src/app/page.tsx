@@ -39,7 +39,7 @@ export default function Home() {
     <div>
       <Header />
       <HomeScreen />
-      <CarrouselPartne/>
+      <CarrouselPartne/> 
       <main className="min-h-screen flex flex-col justify-center items-center">
         <AboutSection />
         <PartnersProjects />
@@ -47,7 +47,7 @@ export default function Home() {
         <TabsSection />
         <DepositionsSection />
         <TopFooter />
-        <Footer />
+         <Footer /> 
       </main>
     </div>
   );
