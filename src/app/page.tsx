@@ -10,6 +10,7 @@ import { OurServicesSection } from './components/our-services/OurServicesSection
 import { CarrouselPartne } from './components/CarrouselPartne';
 import TabsSection from './components/tabs-section/tabs-section';
 import { useEffect, useRef } from 'react';
+import MobileHeader from './components/MobileHeader';
 
 export default function Home() {
   const ourServicesRef = useRef<HTMLDivElement>(null);
@@ -51,7 +52,12 @@ export default function Home() {
 
   return (
     <div className="scroll-smooth">
-      <Header />
+      <div className='xs:hidden md:block'>
+        <Header />
+      </div>
+      <div className='xs:block md:hidden'>
+        <MobileHeader />
+      </div>
       <HomeScreen/> 
       <CarrouselPartne/>
       <main className="min-h-screen flex flex-col justify-center items-center">
