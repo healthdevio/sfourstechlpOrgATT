@@ -66,19 +66,19 @@ export default function Footer() {
         linksArray={[
           {
             label: "Startup para Statups",
-            link: "#",
+            link: "#inicio",
           },
           {
             label: "O que fazemos",
-            link: "#",
+            link: "#ourServices",
           },
           {
             label: "Cases",
-            link: "#",
+            link: "#cases",
           },
           {
             label: "Quem somos",
-            link: "#",
+            link: "#nos",
           },
         ]}
       />

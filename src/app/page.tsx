@@ -10,46 +10,64 @@ import { OurServicesSection } from './components/our-services/OurServicesSection
 import { CarrouselPartne } from './components/CarrouselPartne';
 import TabsSection from './components/tabs-section/tabs-section';
 import { useEffect, useRef } from 'react';
-import { useRouter } from 'next/router';
 
 export default function Home() {
-  const ourServicesRef = useRef<any>(null);
-  const opnionsRef = useRef<any>(null);
-  const usRef = useRef<any>(null);
+  const ourServicesRef = useRef<HTMLDivElement>(null);
+  const opnionsRef = useRef<HTMLDivElement>(null);
+  const usRef = useRef<HTMLDivElement>(null);
+  const casesRef = useRef<HTMLDivElement>(null);
+  const workflowRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    const handleHashChange = () => {
       const queryParams = new URLSearchParams(window.location.search);
-      const scrollTo = queryParams.get('scrollTo');
+      const scrollTo = queryParams.get('scrollTo') || window.location.hash.substring(1);
       if (scrollTo === 'ourServices') {
         ourServicesRef.current?.scrollIntoView({ behavior: 'smooth' });
       }
-
       if (scrollTo === 'Opnions') {
         opnionsRef.current?.scrollIntoView({ behavior: 'smooth' });
       }
-
-      if (scrollTo === 'Us') {
+      if (scrollTo === 'us') {
         usRef.current?.scrollIntoView({ behavior: 'smooth' });
       }
-    }
+      if (scrollTo === 'cases') {
+        casesRef.current?.scrollIntoView({ behavior: 'smooth' });
+      }
+      if (scrollTo === 'workflow') {
+        workflowRef.current?.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    handleHashChange();
+
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
   }, []);
 
+
   return (
-    <div>
+    <div className="scroll-smooth">
       <Header />
-      <HomeScreen />
+      <HomeScreen/> 
       <CarrouselPartne/>
       <main className="min-h-screen flex flex-col justify-center items-center">
-        <div ref={usRef}>
+        <div id="nos" ref={usRef}>
           <AboutSection />
         </div>
-        <PartnersProjects />
-        <div ref={ourServicesRef}>
+        <div id="cases" ref={casesRef}>
+          <PartnersProjects />
+        </div>
+        <div id="ourServices" ref={ourServicesRef}>
           <OurServicesSection />
         </div>
-        <TabsSection />
-        <div ref={opnionsRef}>
+        <div id="workflow" ref={workflowRef}>
+          <TabsSection />
+        </div>
+        <div id="Opnions" ref={opnionsRef}>
           <DepositionsSection />
         </div>
         <TopFooter />
