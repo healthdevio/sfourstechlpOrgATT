@@ -2,15 +2,23 @@
 import React from 'react';
 import Footer from '../components/footer/Footer';
 import StrokeIcon from '../components/icons/stroke';
-import { Select, SelectContent, SelectGroup, SelectTrigger, SelectValue } from '../components/ui/Select';
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from '../components/ui/Select';
 import Input from '../components/ui/Input';
 import { Checkbox } from '../components/ui/Checkbox';
 import Image from 'next/image';
 import GenericImage from '../components/images/genericPhoto.jpg';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import S4sLogoIcon from '../components/icons/s4sLogo';
 
 const ContactForm: React.FC = () => {
+  const [clientName, setClientName] = React.useState<string>('')
+  const [clientEmail, setClientEmail] = React.useState<string>('')
+  const [clientPhone, setClientPhone] = React.useState<string>('')
+  const [clientCompany, setClientCompany] = React.useState<string>('')
+  const [projectStage, setProjectStage] = React.useState<string>('')
+  const [projectDevelopmentTime, setProjectDevelopmentTime] = React.useState<string>('')
+  const [projectDescription, setProjectDescription] = React.useState<string>('')
+
   const projectTime = [
     {
       label: "0 - 2 meses"
@@ -23,19 +31,32 @@ const ContactForm: React.FC = () => {
     },
   ]
 
+  function formatPhone(phoneNumber: string) {
+    const maskedNumber = phoneNumber
+      .replace(/\D/g, '')
+      .replace(/^(\d{2})(\d)/g, '($1) $2')
+      .replace(/(\d)(\d{4})$/, '$1-$2');
+    return maskedNumber.length > 15 ? maskedNumber.substring(0, 15) : maskedNumber;
+  }
+
   return (
     <div className='w-full h-sreen '>
       <div className='w-full h-sreen flex pt-8 pb-8 px-0 bg-[#121214]'>
-        <div className='min-w-[30rem] h-[35rem] ml-8 px-11 py-14 bg-[#0A0A0B] rounded-lg'>
-          <h1 className='text-white text-3xl font-medium'>
-            Comece sua <br />
-            jornada conosco.
-          </h1>
-          <p className='text-[#7B7B7B] mt-8 text-base'>
-            Juntos transformaremos sua ideia<br />
-            em produto real e acessível ao<br />
-            mercado de startups!
-          </p>
+        <div className='min-w-[30rem] flex flex-col justify-between h-screen ml-8 px-11 py-14 bg-[#0A0A0B] rounded-lg'>
+          <div className='mb-32'>
+            <S4sLogoIcon />
+          </div>
+          <div>
+            <h1 className='text-white text-3xl font-medium'>
+              Comece sua <br />
+              jornada conosco.
+            </h1>
+            <p className='text-[#7B7B7B] mt-8 text-base'>
+              Juntos transformaremos sua ideia<br />
+              em produto real e acessível ao<br />
+              mercado de startups!
+            </p>
+          </div>
 
           <div className='w-full h-40 bg-white/[2%] mt-24 px-6 py-8'>
             <div className='flex items-center justify-between'>
@@ -91,17 +112,39 @@ const ContactForm: React.FC = () => {
             <h1 className='mb-10'>Informações para contato</h1>
 
             <div className='grid grid-cols-2 gap-8'>
-              <Input placeholder='Seu nome' />
-              <Input placeholder='Seu e-mail' />
-              <Input placeholder='Seu telefone' />
-              <Input placeholder='Sua empresa' />
+              <Input
+                value={clientName}
+                onChange={(e) => setClientName(e.target.value)}
+                placeholder='Seu nome' />
+              <Input
+                value={clientEmail}
+                onChange={(e) => setClientEmail(e.target.value)}
+                placeholder='Seu e-mail' />
+              <Input
+                value={clientPhone}
+                maxLength={15}
+                onChange={(e) => {
+                  const formattedPhone = formatPhone(e.target.value);
+                  setClientPhone(formattedPhone);
+                }}
+                placeholder='Seu telefone'
+              />
+              <Input
+                value={clientCompany}
+                onChange={(e) => setClientCompany(e.target.value)}
+                placeholder='Sua empresa' />
             </div>
           </div>
 
           <div className='w-full px-14 mt-14 flex gap-8'>
             <div className='w-full'>
               <h1 className='mb-10'>Em qual etapa está o seu projeto</h1>
-              <Select>
+              <Select
+                value={projectStage}
+                onValueChange={
+                  (value) => setProjectStage(value)
+                }
+              >
                 <SelectTrigger
                 >
                   <SelectValue
@@ -111,11 +154,13 @@ const ContactForm: React.FC = () => {
                     <SelectGroup>
                       {
                         projectTime.map((time, index) => (
-                          <div
+                          <SelectItem
+                            key={index}
+                            value={time.label}
                             className='hover:bg-white/10 cursor-pointer p-2 rounded-lg transition-colors duration-100'
-                            key={index}>
+                          >
                             <p>{time.label}</p>
-                          </div>
+                          </SelectItem>
                         ))
                       }
                     </SelectGroup>
@@ -126,7 +171,12 @@ const ContactForm: React.FC = () => {
 
             <div className='w-full'>
               <h1 className='mb-10'>Quanto tempo você tem para desenvolver?</h1>
-              <Select>
+              <Select
+                value={projectDevelopmentTime}
+                onValueChange={
+                  (value) => setProjectDevelopmentTime(value)
+                }
+              >
                 <SelectTrigger
                 >
                   <SelectValue
@@ -136,11 +186,13 @@ const ContactForm: React.FC = () => {
                     <SelectGroup>
                       {
                         projectTime.map((time, index) => (
-                          <div
+                          <SelectItem
+                            key={index}
+                            value={time.label}
                             className='hover:bg-white/10 cursor-pointer p-2 rounded-lg transition-colors duration-100'
-                            key={index}>
+                          >
                             <p>{time.label}</p>
-                          </div>
+                          </SelectItem>
                         ))
                       }
                     </SelectGroup>
@@ -154,6 +206,8 @@ const ContactForm: React.FC = () => {
             <h1 className='mb-10'>Descrição do projeto</h1>
 
             <textarea
+              value={projectDescription}
+              onChange={(e) => setProjectDescription(e.target.value)}
               placeholder='Conte-nos sobre seu projeto'
               className='bg-transparent border hover:border-[#434343] border-[#2B2B2B] h-32 rounded-lg w-full px-3 focus:border-[#F19C1C] py-3 placeholder:text-[#707070] outline-none resize-none'
               style={{ overflowY: 'auto' }}
