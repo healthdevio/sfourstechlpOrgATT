@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Life from '@/assets/4life.svg';
 import atheva from "@/assets/atheva.svg";
@@ -12,9 +12,9 @@ import liv from '@/assets/livsaude.svg';
 import topyou from '@/assets/top2you.svg';
 import byteme from '@/assets/byteme.svg';
 import inside from '@/assets/insideout2.svg';
-import Crea from '@/assets/Logo CREA.png'
-import invest from '@/assets/Invest.png'
-import mpro from '@/assets/mpro.png'
+import Crea from '@/assets/Logo CREA.png';
+import invest from '@/assets/Invest.png';
+import mpro from '@/assets/mpro.png';
 
 export function CarrouselPartne() {
     const images = [
@@ -33,24 +33,6 @@ export function CarrouselPartne() {
         mpro
     ];
 
-    const carouselRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        const scrollInterval = setInterval(() => {
-            if (carouselRef.current) {
-                const { current } = carouselRef;
-                const scrollAmount = current.offsetWidth / 3;
-                current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-
-                if (current.scrollLeft + current.offsetWidth >= current.scrollWidth) {
-                    current.scrollTo({ left: 0, behavior: 'smooth' });
-                }
-            }
-        }, 3000);
-
-        return () => clearInterval(scrollInterval);
-    }, []);
-
     return (
         <div className="bg-[#131313] py-[42px] overflow-hidden">
             <style jsx>{`
@@ -68,15 +50,18 @@ export function CarrouselPartne() {
                     gap: 3rem;
                     animation: scroll 30s linear infinite;
                 }
+                .carousel-track:hover {
+                    animation-play-state: paused;
+                }
                 .flex-none {
                     min-width: 170px;
                 }
             `}</style>
             <div className="carousel">
-                <div ref={carouselRef} className="carousel-track">
+                <div className="carousel-track">
                     {images.concat(images).map((src, index) => (
                         <div key={index} className="flex-none w-32 h-32 p-2 flex items-center justify-center">
-                            <Image src={src} alt={`Parceiro ${index + 1}`} layout="responsive" width={150} height={150} objectFit="contain" />
+                            <Image src={src} alt={`Parceiro ${index + 1}`} layout="responsive" width={0} height={0} objectFit="contain" />
                         </div>
                     ))}
                 </div>

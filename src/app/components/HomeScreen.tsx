@@ -23,19 +23,19 @@ export default function HomeScreen() {
             </div>
             <div className="pt-[56px]">
                 <div className="flex justify-center items-center">
-                    <button className=" py-2 px-4 rounded-full flex items-center space-x-2">
-                        <span className="font-WorkSans text-[16px] text-[#1F1F1F] bg-[#FF9700] leading-[28px] font-medium px-4 rounded-full flex space-x-2 py-2">
+                    <Link className=" py-2 px-4 rounded-full flex items-center space-x-2" href="/contactForm">
+                        <span className="font-WorkSans text-[16px] text-[#1F1F1F] bg-yellowbutton leading-[28px] font-medium px-4 rounded-full flex space-x-2 py-2">
                             Iniciar projeto
                             <div className="ml-[16px] pb-[5px] pt-[5px]">
                             <LinkArrowIcon />
                             </div>
                         </span>
-                    </button>
-                    <button className="border border-[#FFFFFF] font-bold py-2 px-4 rounded-full flex items-center space-x-2">
+                    </Link>
+                    <Link className="border border-[#FFFFFF] font-bold py-2 px-4 rounded-full flex items-center space-x-2" href='/'>
                         <span className="font-WorkSans text-[16px] text-[#FFFF] leading-[28px] font-medium">Assista ao vídeo</span>
                         <PlayIcon
                             color='#FFFFFF' />
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>
