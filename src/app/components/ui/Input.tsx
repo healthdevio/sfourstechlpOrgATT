@@ -15,7 +15,7 @@ const Input: React.FC<InputProps> = ({ placeholder, value, onChange, maxLength }
         maxLength={maxLength}
         onChange={onChange}
         placeholder={placeholder}
-        className='bg-transparent border hover:border-[#434343] border-[#2B2B2B] focus:border-[#F19C1C] h-14 rounded-lg w-full px-6 placeholder:text-[#707070] outline-none'
+        className='bg-transparent border hover:border-[#434343] border-[#2B2B2B] focus:border-[#F19C1C] h-16 rounded-lg w-full px-6 placeholder:text-[#707070] outline-none'
       />
     </div>
   )
