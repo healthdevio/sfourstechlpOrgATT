@@ -2,6 +2,7 @@ import Image from 'next/image'
 import arrow2 from '@/assets/arrow-2.svg'
 import { PlayIcon } from './icons/PlayIcon';
 import { LinkArrowIcon } from './icons/LinkArrowIcon';
+import Link from 'next/link';
 
 export default function HomeScreen() {
     return (

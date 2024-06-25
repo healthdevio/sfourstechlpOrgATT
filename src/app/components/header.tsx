@@ -31,7 +31,7 @@ export default function Header() {
             <a className="hover:text-gray-300 font-WorkSans text-[16px]">Workflow</a>
           </Link>
       </nav>
-        <Link href="/iniciar-projeto" legacyBehavior>
+        <Link href="/contactForm" legacyBehavior>
           <a className="bg-[#E19322] text-[#1F1F1F] rounded-full font-WorkSans" style={{ borderRadius: '100px', padding: '8px 24px', gap: '10px' }}>
             Iniciar Projeto
           </a>
