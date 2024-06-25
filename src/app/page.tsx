@@ -12,6 +12,7 @@ import TabsSection from './components/tabs-section/tabs-section';
 import { useEffect, useRef } from 'react';
 import MobileHeader from './components/MobileHeader';
 import MobileFooter from './components/MobileFooter';
+import HomeScreenMobile from './components/HomeScreenMoile';
 
 export default function Home() {
   const ourServicesRef = useRef<HTMLDivElement>(null);
@@ -59,7 +60,12 @@ export default function Home() {
       <div className='xs:block md:hidden'>
         <MobileHeader />
       </div>
-      <HomeScreen />
+      <div className='xs:block md:hidden'>
+        <HomeScreenMobile />
+        </div>
+      <div className='xs:hidden md:block'>
+        <HomeScreen />
+      </div>
       <CarrouselPartne />
       <main className="min-h-screen flex flex-col justify-center items-center">
         <div id="nos" ref={usRef}>
