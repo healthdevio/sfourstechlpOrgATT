@@ -14,7 +14,10 @@ import iconSocialImageFb from "@/../public/fb-icon.svg"
 import iconSocialImageIg from "@/../public/ig-icon.svg"
 import iconSocialImageBe from "@/../public/be-icon.svg"
 import iconSocialImageIn from "@/../public/in-icon.svg"
-import { ColumnFooter } from '../components/footer/ColumnFooter';
+import logo from '@/assets/logos4s-svg.svg'
+import { MenuIcon, X } from 'lucide-react';
+import { LinkArrowIcon } from '../components/icons/LinkArrowIcon';
+import MobileHeader from '../components/MobileHeader';
 
 const ContactForm: React.FC = () => {
   const [clientName, setClientName] = React.useState<string>('')
@@ -237,9 +240,9 @@ const ContactForm: React.FC = () => {
         </div>
         <Footer />
       </div>
-
       <div className='xs:block md:hidden'>
-        <div className='w-full h-sreen flex flex-col pt-8 pb-8 px-0 bg-[#121214]'>
+        <MobileHeader />
+        <div className='w-full h-sreen flex flex-col pb-8 px-0 bg-[#121214]'>
           <div className='w-full mt-16 px-6'>
             <h1 className='mb-10'>Informações para contato</h1>
             <div className='w-full flex flex-col gap-6'>
