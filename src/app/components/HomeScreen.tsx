@@ -23,8 +23,8 @@ export default function HomeScreen() {
             </div>
             <div className="pt-[56px]">
                 <div className="flex justify-center items-center">
-                    <Link className=" py-2 px-4 rounded-full flex items-center space-x-2" href="/contactForm">
-                        <span className="font-WorkSans text-[16px] text-[#1F1F1F] bg-yellowbutton leading-[28px] font-medium px-4 rounded-full flex space-x-2 py-2">
+                    <Link className=" py-2 px-4 rounded-full flex items-center space-x-2 hover:text-[#FF9700]" href="/contactForm">
+                        <span className="font-WorkSans text-[16px] text-[#1F1F1F] bg-yellowbutton leading-[28px] font-medium px-4 rounded-full flex space-x-2 py-2 hover:bg-[#FF9700]">
                             Iniciar projeto
                             <div className="ml-[16px] pb-[5px] pt-[5px]">
                             <LinkArrowIcon />

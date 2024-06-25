@@ -2,10 +2,10 @@
 import React, { useRef, useState } from 'react';
 
 import SaudeHDThumbnail from '@/assets/saudehd.png';
-import FiiboThumbnail from '@/app/components/images/fiibo.jpg';
-import ElegeBrThumbnail from '@/app/components/images/elegeBr.jpg';
-import MPROThumbnail from '@/app/components/images/mpro.jpg';
-import CreaThumbnail from '@/app/components/images/crea.jpg';
+import FiiboThumbnail from '@/assets/fiiboResize.png';
+import ElegeBrThumbnail from '@/assets/elegeresize.png';
+import MPROThumbnail from '@/assets/mpresize.png';
+import CreaThumbnail from '@/assets/creaResize.png';
 import Image from 'next/image';
 import GrayArrowIcon from './icons/grayArrow';
 import YellowArrowIcon from './icons/yellowArrow';
@@ -158,6 +158,7 @@ const PartnersProjects: React.FC = () => {
                     width={500}
                     height={300}
                     layout="responsive"
+                    className='rounded-md'
                   />
                 </Link>
               </div>
