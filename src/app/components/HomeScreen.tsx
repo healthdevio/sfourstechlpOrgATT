@@ -25,9 +25,7 @@ export default function HomeScreen() {
                                 'Tecnologia para sucesso.',
                                 'Soluções que inspiram.',
                                 'Ágil e eficiente.',
-                                'Ideias com precisão.',
-                                'Visão, código, inovação.',
-                                'Conectando ideias, resultados.',
+                                'Visão, código, inovação.'
                             ]}
                             loop={0}
                             cursor
