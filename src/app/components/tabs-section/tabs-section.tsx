@@ -22,7 +22,7 @@ export default function TabsSection() {
   };
 
   return (
-    <section className="bg-[#111111] w-full px-4 md:px-8 lg:px-16 xl:px-36">
+    <section className="bg-[#111111] w-full px-4 md:px-8 lg:px-16 xl:px-36 py-4">
       <TabsHeader />
       <Description />
       <div className="mt-20 md:mt-16 mb-10">
@@ -61,11 +61,10 @@ export default function TabsSection() {
             description="Aqui fazemos as considerações finais sobre o projeto, entregas e brindamos a finalização do MVP, ou ideia do cliente." 
             iconSize="w-28 h-28 pb-16" 
           />
-          <hr className='border-[#232323]' />
         </div>
         <div className="hidden md:block">
           <Tabs.Root value={activeTab} onValueChange={handleTabChange} orientation="vertical">
-            <Tabs.List className="flex space-x-4 border-b-2 border-[#434343]">
+            <Tabs.List className="flex flex-col md:flex-row md:space-x-4 md:border-b-2 border-[#434343]">
               <TabItem value="kickoff" icon={EnergyIcon} label="Kickoff" />
               <TabItem value="discovery" icon={MagnifyingGlassIcon} label="Discovery" />
               <TabItem value="design" icon={BookMountain} label="Design" />

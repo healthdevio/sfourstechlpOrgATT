@@ -67,7 +67,7 @@ export default function Home() {
         <HomeScreen />
       </div>
       <CarrouselPartne />
-      <main className="min-h-screen flex flex-col justify-center items-center">
+      <main className="min-h-screen flex flex-col">
         <div id="nos" ref={usRef}>
           <AboutSection />
         </div>
