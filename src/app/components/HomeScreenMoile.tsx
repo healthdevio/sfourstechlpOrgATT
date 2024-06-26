@@ -11,8 +11,8 @@ const HomeScreenMobile: React.FC = () => {
     return(
     <div className="pt-[80px] pb-20 px-4 bg-[#111111]" style={{ backgroundImage: `url(${LopeerBg.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="flex justify-center items-center">
-            <div className="border-[1px] border-[#222222] rounded-full pt-[16px] pb-[16px] pl-[5px] pr-[85px] text-center">
-                <span className="text-[14px]/[14px] text-center font-semibold text-[#1F1F1F] bg-[#E19322] rounded-full pt-[12px] pb-[12px] pl-[16px] pr-[16px] font-WorkSans">Olá!</span>
+            <div className="border-[1px] border-[#222222] rounded-full pr-[85px] text-center">
+                <span className="text-[14px]/[14px] text-center font-semibold text-[#1F1F1F] bg-[#E19322] rounded-full font-WorkSans">Olá!</span>
                 <span className="text-base text-center font-normal text-[#FFFFFF] ml-[40px] font-WorkSans">No que podemos ajudar?</span>
             </div>
         </div>

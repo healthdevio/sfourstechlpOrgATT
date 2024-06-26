@@ -33,7 +33,7 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({ home }) => {
 
   return (
     <div className='w-full fixed z-50'>
-      <div className='w-full flex px-7 justify-between items-center h-20 border-b bg-[#121214] border-[#232323]'>
+      <div className='w-full flex px-7 justify-between items-center h-20 md:border-b bg-[#121214] border-[#232323]'>
         <Link href='/'>
           <Image
             width={90}
@@ -49,9 +49,9 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({ home }) => {
 
       {headerIsOpened && (
         <div className={`w-full py-16 px-12 absolute flex flex-col items-center justify-center bg-[#121214] ${animateOut ? 'slide-up-animation' : 'slide-down-animation'}`}>
-          <div className='flex text-center flex-col gap-5'>
+          <div className='flex text-center text-base font-medium flex-col gap-5 text-[#AAAAAA]'>
             <Link href='/'>
-              <p>Inicio</p>
+              <div>Inicio</div>
             </Link>
             <Link href={home ? '/#nos' : '/?scrollTo=Us'}>
               <p>Quem somos</p>
@@ -74,7 +74,7 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({ home }) => {
             <Link
               className='flex gap-4'
               href='/contactForm'>
-              <p className='text-[#1F1F1F] text-xl font-medium'>Iniciar projeto</p>
+              <p className='text-[#1F1F1F] text-xl font-semibold'>Iniciar projeto</p>
               <LinkArrowIcon />
             </Link>
           </button>

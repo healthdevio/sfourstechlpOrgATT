@@ -12,16 +12,16 @@ export default function Header() {
     }
   }, []);
 
-  const handleLinkClick = (hash:any) => {
+  const handleLinkClick = (hash: any) => {
     setActiveRoute(hash);
   };
 
-  const getLinkClass = (path:any) => {
+  const getLinkClass = (path: any) => {
     return activeRoute === path ? 'text-white' : 'text-gray-300 hover:text-white';
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full pb-[38px] pt-[38px] pl-[100px] pr-[100px] bg-black text-white flex items-center justify-between border-b-[1px] border-[#222222] z-50">
+    <header className="fixed top-0 left-0 w-full py-9 px-24 bg-[#111111] text-white flex items-center justify-between border-b-[1px] border-[#222222] z-50">
       <div className="flex items-center">
         <Image
           className="ml-[30px] pb-[5px] pt-[5px]"
@@ -33,23 +33,23 @@ export default function Header() {
       </div>
       <nav className="flex gap-12">
         <Link href="/#inicio" legacyBehavior>
-          <a className={`${getLinkClass('/#inicio')} font-WorkSans text-[16px] cursor-pointer`} onClick={() => handleLinkClick('/#inicio')}>Inicio</a>
+          <a className={`${getLinkClass('/#inicio')} font-WorkSans text-base cursor-pointer`} onClick={() => handleLinkClick('/#inicio')}>Inicio</a>
         </Link>
         <Link href="/#nos" legacyBehavior>
-          <a className={`${getLinkClass('/#nos')} font-WorkSans text-[16px] cursor-pointer`} onClick={() => handleLinkClick('/#nos')}>Quem Somos</a>
+          <a className={`${getLinkClass('/#nos')} font-WorkSans text-base cursor-pointer`} onClick={() => handleLinkClick('/#nos')}>Quem Somos</a>
         </Link>
         <Link href="/#cases" legacyBehavior>
-          <a className={`${getLinkClass('/#cases')} font-WorkSans text-[16px] cursor-pointer`} onClick={() => handleLinkClick('/#cases')}>Cases</a>
+          <a className={`${getLinkClass('/#cases')} font-WorkSans text-base cursor-pointer`} onClick={() => handleLinkClick('/#cases')}>Cases</a>
         </Link>
         <Link href="/#ourServices" legacyBehavior>
-          <a className={`${getLinkClass('/#ourServices')} font-WorkSans text-[16px] cursor-pointer`} onClick={() => handleLinkClick('/#ourServices')}>Serviços</a>
+          <a className={`${getLinkClass('/#ourServices')} font-WorkSans text-base cursor-pointer`} onClick={() => handleLinkClick('/#ourServices')}>Serviços</a>
         </Link>
         <Link href="/#workflow" legacyBehavior>
-          <a className={`${getLinkClass('/#workflow')} font-WorkSans text-[16px] cursor-pointer`} onClick={() => handleLinkClick('/#workflow')}>Workflow</a>
+          <a className={`${getLinkClass('/#workflow')} font-WorkSans text-base cursor-pointer`} onClick={() => handleLinkClick('/#workflow')}>Workflow</a>
         </Link>
       </nav>
       <Link href="/contactForm" legacyBehavior>
-        <a className="bg-yellowbutton text-[#1F1F1F] rounded-full font-WorkSans" style={{ borderRadius: '100px', padding: '8px 24px', gap: '10px' }}>
+        <a className="bg-yellowbutton text-[#1F1F1F] text-base font-medium rounded-full font-WorkSans" style={{ borderRadius: '100px', padding: '8px 24px', gap: '10px' }}>
           Iniciar Projeto
         </a>
       </Link>
