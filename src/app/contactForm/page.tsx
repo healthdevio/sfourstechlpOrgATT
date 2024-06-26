@@ -387,10 +387,15 @@ const ContactForm: React.FC = () => {
               />
 
               <div className='flex items-center mt-8'>
-                <Checkbox className='size-4' />
+                <Checkbox
+                  checked={privacityPolicy}
+                  onCheckedChange={() => setPrivacityPolicy(!privacityPolicy)}
+                  className='size-4' />
                 <p className='text-[#909090] ml-3 text-sm'>Li e aceito a <span className='text-[#F19C1C] cursor-pointer'>politica de privacidade</span></p>
               </div>
-              <button className='w-full h-16 bg-[#F19C1C] mt-14'>
+              <button
+                onClick={sendEmail}
+                className='w-full h-16 bg-[#F19C1C] mt-14'>
                 <p className='text-[#1F1F1F] font-medium text-xl'>ENVIAR</p>
               </button>
             </div>
