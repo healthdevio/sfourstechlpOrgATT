@@ -6,6 +6,7 @@ import FiiboThumbnail from '@/assets/fiiboResize.png';
 import ElegeBrThumbnail from '@/assets/elegeresize.png';
 import MPROThumbnail from '@/assets/mpresize.png';
 import CreaThumbnail from '@/assets/creaResize.png';
+import InvestPlusThumbnail from '@/assets/investPlusThumbnail.jpg';
 import Image from 'next/image';
 import GrayArrowIcon from './icons/grayArrow';
 import YellowArrowIcon from './icons/yellowArrow';
@@ -37,7 +38,7 @@ const PartnersProjects: React.FC = () => {
   const projects = [
     {
       name: "Saúde HD",
-      description: "Somos especialistas em impulsionar o valor dos negócios através de soluções sob medida, abrangendo desde Inteligência Artificial até.",
+      description: "Somos a solução intuitiva, completa e de baixo custo que cuida da sua clínica enquanto você prioriza a experiência de quem confia em você.",
       thumbnail: SaudeHDThumbnail,
       partnerPage: "https://saudehd.com.br/",
       tags: [
@@ -51,7 +52,7 @@ const PartnersProjects: React.FC = () => {
     },
     {
       name: "Fiibo",
-      description: "Somos especialistas em impulsionar o valor dos negócios através de soluções sob medida, abrangendo desde Inteligência Artificial até.",
+      description: "Com a Fiibo ficou mais fácil cuidar da sua saúde! Nós proporcionamos a liberdade para escolher os produtos e serviços de saúde e bem-estar que melhor atendem às suas necessidades, tudo em um só lugar.",
       thumbnail: FiiboThumbnail,
       partnerPage: "https://fiibo.com.br/",
       tags: [
@@ -85,7 +86,7 @@ const PartnersProjects: React.FC = () => {
     },
     {
       name: "Ministério Público do Estado de Rondonia",
-      description: "Somos especialistas em impulsionar o valor dos negócios através de soluções sob medida, abrangendo desde Inteligência Artificial até.",
+      description: "Com o advento da Constituição Federal de 1988, o Ministério Público teve suas funções ampliadas e a principal delas é defender os direitos de qualquer cidadão e da sociedade.",
       thumbnail: MPROThumbnail,
       partnerPage: "https://www.mpro.mp.br",
       tags: [
@@ -102,9 +103,23 @@ const PartnersProjects: React.FC = () => {
     },
     {
       name: "CREA-CE",
-      description: "Somos especialistas em impulsionar o valor dos negócios através de soluções sob medida, abrangendo desde Inteligência Artificial até.",
+      description: "Órgão máximo diretivo e deliberativo, é constituído por conselheiros, na qualidade de profissionais representantes diretos das entidades de classe.",
       thumbnail: CreaThumbnail,
       partnerPage: "https://www.creace.org.br/",
+      tags: [
+        {
+          nameTag: "Desenvolvimento",
+        },
+        {
+          nameTag: "Design",
+        },
+      ]
+    },
+    {
+      name: "Invest Plus",
+      description: "Através de nossa plataforma, estamos dando acesso a um mercado que há poucos anos era restrito a grandes fundos.",
+      thumbnail: InvestPlusThumbnail,
+      partnerPage: "https://investplus.vc/",
       tags: [
         {
           nameTag: "Desenvolvimento",
