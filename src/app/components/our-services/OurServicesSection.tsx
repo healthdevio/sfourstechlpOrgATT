@@ -8,9 +8,10 @@ import { TitleSection } from '../TitleSection'
 export function OurServicesSection() {
     return (
         <section className='w-full bg-[#0A0A0B] py-14 md:p-24'>
-            <TitleSection title='Nossos Serviços'/>
+            <TitleSection title='Nossos Serviços'
+            titleColor="white"/>
             <div className='flex flex-col md:flex-row items-start md:justify-between md:items-center px-6 md:px-0 md:mb-24 mb-10 gap-6'>
-                <div className='text-3xl md:text-[2.5rem] font-semibold leading-[33px] md:leading-[60px]'>
+                <div className='text-3xl md:text-[2.5rem] font-semibold leading-[33px] md:leading-[60px] text-white'>
                     Serviços projetados para <br />
                     acelerar sua produção.
                 </div>

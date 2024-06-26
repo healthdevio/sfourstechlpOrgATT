@@ -28,6 +28,7 @@ export default function TabsSection() {
     <section className="bg-[#111111] w-full px-4 md:px-8 lg:px-16 xl:px-36 py-24">
       <TitleSection 
         title='Workflow'
+        titleColor="white"
       />
       <Description />
       <div className="mt-20 md:mt-20 mb-10">

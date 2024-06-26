@@ -139,7 +139,8 @@ const PartnersProjects: React.FC = () => {
     <div className='w-full h-full bg-[#111111] pb-14 md:pb-24'>
       <div className='w-full flex flex-col px-24 xs:hidden md:block'>
         <div className='pt-[56px] pb-16'>
-          <TitleSection title='Cases' />
+          <TitleSection title='Cases' 
+          titleColor="white"/>
           <div className='flex justify-between items-center'>
             <h1 className='text-[22px]/[33px] font-semibold font-WorkSans'>Transformando ideias em <br /> realidade.</h1>
             <div className='flex items-center'>
@@ -214,8 +215,9 @@ const PartnersProjects: React.FC = () => {
 
       <div className='w-full flex flex-col px-6 mb-24 bg-[#111111] xs:block md:hidden'>
         <div className='pt-[56px]'>
-          <TitleSection title='Cases' />
-          <h1 className='text-[22px]/[33px] font-semibold font-WorkSans'>Transformando ideias <br /> em realidade.</h1>
+          <TitleSection title='Cases' 
+          titleColor="white"/>
+          <h1 className='text-[22px]/[33px] font-semibold font-WorkSans text-white'>Transformando ideias <br /> em realidade.</h1>
           <div className='pb-[56px] pt-[24px]'>
             <span className='text-[14px]/[21px] font-normal font-WorkSans text-[#909090]'>Designers e desenvolvedores trabalhando lado a lado para entregarmos um projeto mais eficiente e completo!</span>
           </div>

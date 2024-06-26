@@ -16,6 +16,7 @@ export function DepositionsSection() {
             <div className='mb-10 md:mb-auto'>
                 <TitleSection
                     title='Depoimentos'
+                    titleColor="white"
                 />
                 <div className='grid px-6 md:px-0'>
                     <div className='text-[2.5rem] text-white font-semibold md:font-bold mb-6 md:mb-24'>

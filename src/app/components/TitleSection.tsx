@@ -3,10 +3,11 @@ import rectangleImage from '@/../public/rectangle.svg'
 import rectangleMImage from '@/assets/images/rectangle-m.svg'
 
 interface Props {
-    title: string
+    title: string;
+    titleColor?: string;
 }
 
-export function TitleSection({ title }: Props) {
+export function TitleSection({ title, titleColor = 'white' }: Props) {  
     return (
         <div className='flex uppercase mb-11 text-base font-WorkSans font-semibold gap-5'>
             <Image
@@ -19,7 +20,7 @@ export function TitleSection({ title }: Props) {
                 src={rectangleMImage}
                 alt='#'
             />
-            {title}
+            <span style={{ color: titleColor }}>{title}</span>
         </div>
     )
 }

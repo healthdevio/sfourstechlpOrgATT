@@ -11,6 +11,7 @@ export function AboutSection() {
             <div className="relative col-span-7 py-24">
                 <TitleSection
                     title="Quem somos?"
+                    titleColor="white"
                 />
                 <div className="flex flex-col mb-24 px-6 md:px-0 gap-10">
                     <div className="font-semibold text-[2.5rem] leading-[33px] md:leading-[60px] text-white">

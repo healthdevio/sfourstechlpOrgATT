@@ -22,7 +22,7 @@ const HomeScreenMobile: React.FC = () => {
             </div>
             <div className="pt-[84px]">
                 <div className="text-center">
-                    <h1 className="font-WorkSans text-[36px]/[43px] font-medium">
+                    <h1 className="font-WorkSans text-[36px]/[43px] font-medium text-[#FFFF]">
                         <Typewriter
                             words={[
                                 'Realize suas ideias.',
