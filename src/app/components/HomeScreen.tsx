@@ -25,9 +25,7 @@ export default function HomeScreen() {
                                 'Tecnologia para sucesso.',
                                 'Soluções que inspiram.',
                                 'Ágil e eficiente.',
-                                'Ideias com precisão.',
-                                'Visão, código, inovação.',
-                                'Conectando ideias, resultados.',
+                                'Visão, código, inovação.'
                             ]}
                             loop={0}
                             cursor
@@ -38,7 +36,7 @@ export default function HomeScreen() {
                     </h1>
                 </div>
                 <div className="text-center pt-[32px]">
-                    <span className="font-WorkSans text-[24px] leading-[36px] text-[#E4E4E4]">Somos fábrica de software de alta velocidade. Da ideia ao MVP,<br /> oferecemos agilidade e tecnologia dentro do orçamento.</span>
+                    <span className="font-WorkSans text-[24px] leading-[36px] text-[#E4E4E4]">Somos fábrica de software de <span className="text-[#E19322]">alta velocidade</span>. Da ideia ao MVP,<br /> oferecemos <span className="text-[#E19322]">agilidade</span> e <span className="text-[#E19322]">tecnologia</span> dentro do orçamento.</span>
                 </div>
             </div>
             <div className="pt-[56px]">
