@@ -165,7 +165,7 @@ const ContactForm: React.FC = () => {
             </div>
 
             <div className='mt-16 px-14'>
-              <h1 className='mb-10'>Informações para contato</h1>
+              <h1 className='mb-10 text-white'>Informações para contato</h1>
 
               <div className='grid grid-cols-2 gap-8'>
                 <Input
@@ -194,7 +194,7 @@ const ContactForm: React.FC = () => {
 
             <div className='w-full px-14 mt-14 flex gap-8'>
               <div className='w-full'>
-                <h1 className='mb-10'>Em qual etapa está o seu projeto</h1>
+                <h1 className='mb-10 text-white'>Em qual etapa está o seu projeto</h1>
                 <Select
                   value={projectStage}
                   onValueChange={
@@ -226,7 +226,7 @@ const ContactForm: React.FC = () => {
               </div>
 
               <div className='w-full'>
-                <h1 className='mb-10'>Quanto tempo você tem para desenvolver?</h1>
+                <h1 className='mb-10 text-white'>Quanto tempo você tem para desenvolver?</h1>
                 <Select
                   value={projectDevelopmentTime}
                   onValueChange={
@@ -259,7 +259,7 @@ const ContactForm: React.FC = () => {
             </div>
 
             <div className='mt-14 px-14'>
-              <h1 className='mb-10'>Descrição do projeto</h1>
+              <h1 className='mb-10 text-white'>Descrição do projeto</h1>
 
               <textarea
                 value={projectDescription}
@@ -295,7 +295,7 @@ const ContactForm: React.FC = () => {
         <MobileHeader />
         <div className='w-full h-sreen flex mt-14 flex-col pb-8 px-0 bg-[#121214]'>
           <div className='w-full mt-16 px-6'>
-            <h1 className='mb-10'>Informações para contato</h1>
+            <h1 className='mb-10 text-white'>Informações para contato</h1>
             <div className='w-full flex flex-col gap-6'>
               <Input
                 value={clientName}
@@ -323,7 +323,7 @@ const ContactForm: React.FC = () => {
 
           <div className='w-full px-6 mt-14 flex flex-col gap-8'>
             <div className='w-full'>
-              <h1 className='mb-10'>Em qual etapa está o seu projeto</h1>
+              <h1 className='mb-10 text-white'>Em qual etapa está o seu projeto</h1>
               <Select
                 value={projectStage}
                 onValueChange={
@@ -355,7 +355,7 @@ const ContactForm: React.FC = () => {
             </div>
 
             <div className='w-full'>
-              <h1 className='mb-10'>Quanto tempo você tem para <br/> desenvolver?</h1>
+              <h1 className='mb-10 text-white'>Quanto tempo você tem para <br/> desenvolver?</h1>
               <Select
                 value={projectDevelopmentTime}
                 onValueChange={
@@ -387,7 +387,7 @@ const ContactForm: React.FC = () => {
             </div>
 
             <div>
-              <h1 className='mb-10'>Descrição do projeto</h1>
+              <h1 className='mb-10 text-white' >Descrição do projeto</h1>
 
               <textarea
                 value={projectDescription}
