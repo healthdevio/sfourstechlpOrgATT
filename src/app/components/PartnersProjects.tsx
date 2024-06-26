@@ -120,66 +120,112 @@ const PartnersProjects: React.FC = () => {
   }
 
   return (
-    <div className='w-full flex flex-col px-24 mb-24 mt-10 border-t border-[#232323]'>
-      <div className='w-full flex items-center mb-20 mt-10 justify-between'>
-        <div className='cursor-pointer' onClick={() => scrollProjects('left')}>
-          <GrayArrowIcon />
+    <div className='w-full h-full bg-black'>
+      <div className='w-full flex flex-col px-24 mb-24 mt-10 border-t border-[#232323] xs:hidden md:block'>
+        <div className='w-full flex items-center mb-20 mt-10 justify-between'>
+          <div className='cursor-pointer' onClick={() => scrollProjects('left')}>
+            <GrayArrowIcon />
+          </div>
+
+          <div className='flex items-center gap-2'>
+            <div className={getWidthClass(1, clickCount)} />
+            <div className={getWidthClass(2, clickCount)} />
+            <div className={getWidthClass(3, clickCount)} />
+          </div>
+
+          <div className='cursor-pointer' onClick={() => scrollProjects('right')}>
+            <YellowArrowIcon />
+          </div>
         </div>
 
-        <div className='flex items-center gap-2'>
-          <div className={getWidthClass(1, clickCount)} />
-          <div className={getWidthClass(2, clickCount)} />
-          <div className={getWidthClass(3, clickCount)} />
-        </div>
-
-        <div className='cursor-pointer' onClick={() => scrollProjects('right')}>
-          <YellowArrowIcon />
+        <div
+          ref={projectsRef}
+          style={{ scrollBehavior: 'smooth' }}
+          className='flex gap-12 overflow-x-hidden'>
+          {
+            projects.map((project, index) => (
+              <div
+                className='flex-none w-1/3 h-full rounded-lg'
+                key={index}>
+                <div className='w-full bg-[#FF9700]'>
+                  <Link
+                    href={project.partnerPage}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={project.thumbnail}
+                      alt='partnerThumbnail'
+                      width={500}
+                      height={300}
+                      layout="responsive"
+                      className='rounded-md'
+                    />
+                  </Link>
+                </div>
+                <h1 className='mt-8 mb-6 text-white text-2xl'>{project.name}</h1>
+                <p className='text-[#909090]'>
+                  {project.description}
+                </p>
+                <div className='flex gap-2 mt-10'>
+                  {
+                    project.tags.map((tag, tagIndex) => (
+                      <div
+                        className='py-2 px-4 border flex items-center justify-center border-[#FF9700] hover:bg-[#FF9700]/[32%] duration-100 transition-colors rounded-full cursor-pointer'
+                        key={tagIndex}>
+                        <h1 className='text-white text-base'>{tag.nameTag}</h1>
+                      </div>
+                    ))
+                  }
+                </div>
+              </div>
+            ))
+          }
         </div>
       </div>
 
-      <div
-        ref={projectsRef}
-        style={{ scrollBehavior: 'smooth' }}
-        className='flex gap-12 overflow-x-hidden'>
-        {
-          projects.map((project, index) => (
-            <div
-              className='flex-none w-1/3 h-full rounded-lg'
-              key={index}>
-              <div className='w-full bg-[#FF9700]'>
-                <Link
-                  href={project.partnerPage}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src={project.thumbnail}
-                    alt='partnerThumbnail'
-                    width={500}
-                    height={300}
-                    layout="responsive"
-                    className='rounded-md'
-                  />
-                </Link>
+      <div className='w-full flex flex-col px-6 mb-24  mt-10 bg-black xs:block md:hidden'>
+        <div className='w-full flex gap-10 overflow-x-auto'>
+          {
+            projects.map((project, index) => (
+              <div
+                className='flex-none w-[calc(100%-3rem)] max-w-[500px] h-full rounded-lg'
+                key={index}>
+                <div className='w-full'>
+                  <Link
+                    href={project.partnerPage}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={project.thumbnail}
+                      alt='partnerThumbnail'
+                      width={500}
+                      height={300}
+                      layout="responsive"
+                      className='rounded-md'
+                    />
+                  </Link>
+                </div>
+                <h1 className='mt-8 mb-6 text-white text-2xl'>{project.name}</h1>
+                <p className='text-[#909090]'>
+                  {project.description}
+                </p>
+                <div className='flex gap-2 mt-10'>
+                  {
+                    project.tags.map((tag, tagIndex) => (
+                      <div
+                        className='py-2 px-4 border flex items-center justify-center border-[#FF9700] hover:bg-[#FF9700]/[32%] duration-100 transition-colors rounded-full cursor-pointer'
+                        key={tagIndex}>
+                        <h1 className='text-white text-base'>{tag.nameTag}</h1>
+                      </div>
+                    ))
+                  }
+                </div>
               </div>
-              <h1 className='mt-8 mb-6 text-white text-2xl'>{project.name}</h1>
-              <p className='text-[#909090]'>
-                {project.description}
-              </p>
-              <div className='flex gap-2 mt-10'>
-                {
-                  project.tags.map((tag, tagIndex) => (
-                    <div
-                      className='py-2 px-4 border flex items-center justify-center border-[#FF9700] hover:bg-[#FF9700]/[32%] duration-100 transition-colors rounded-full cursor-pointer'
-                      key={tagIndex}>
-                      <h1 className='text-white text-base'>{tag.nameTag}</h1>
-                    </div>
-                  ))
-                }
-              </div>
-            </div>
-          ))
-        }
+            ))
+          }
+        </div>
       </div>
     </div>
   )
