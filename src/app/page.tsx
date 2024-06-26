@@ -70,9 +70,9 @@ export default function Home() {
         <div id="nos" ref={usRef}>
           <AboutSection />
         </div>
-        {/* <div id="cases" ref={casesRef}>
+        <div id="cases" ref={casesRef}>
           <PartnersProjects />
-        </div> */}
+        </div>
         <div id="ourServices" ref={ourServicesRef}>
           <OurServicesSection />
         </div>
