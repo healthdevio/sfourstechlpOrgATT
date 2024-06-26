@@ -10,10 +10,14 @@ export default function HomeScreen() {
     return (
         <div className="pt-[165px] pb-20 bg-[#111111]" style={{ backgroundImage: `url(${LopeerBg.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className="flex justify-center items-center">
-                <div className="flex border-[1px] border-[#222222] items-center rounded-full py-1 pl-1 pr-[80px] text-center">
+                <Link
+                    target='_blank'
+                    href={"https://wa.me/558588778023?text=Ol%C3%A1,%20quero%20saber%20mais%20sobre%20a%20S4S."}
+                    className="flex border-[1px] border-[#222222] items-center rounded-full py-1 pl-1 pr-[80px] text-center"
+                >
                     <span className="text-base/[16px] text-center font-semibold text-[#1F1F1F] bg-[#E19322] rounded-full py-3 pl-[34px] pr-[34px] font-WorkSans">Olá!</span>
                     <span className="text-base/[16px] text-center font-normal text-[#FFFFFF] ml-[71px] font-WorkSans">No que podemos ajudar?</span>
-                </div>
+                </Link>
             </div>
             <div className="pt-[80px]">
                 <div className="text-center">
