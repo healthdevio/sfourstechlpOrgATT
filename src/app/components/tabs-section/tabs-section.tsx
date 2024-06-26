@@ -11,8 +11,11 @@ import { TabsContent } from './tabs-content';
 import { TabItem } from './tab-item';
 import { MobileStep } from './mobile-step';
 import { Description } from './tabs-description';
-import { TabsHeader } from './tabs-header';
 import Link from 'next/link';
+import { TitleSection } from '../TitleSection'
+import startProjectIcon from '@/../public/start-project-icon.svg'
+import Image from 'next/image';
+import { LinkArrowIcon } from '../icons/LinkArrowIcon';
 
 export default function TabsSection() {
   const [activeTab, setActiveTab] = useState('kickoff');
@@ -22,10 +25,12 @@ export default function TabsSection() {
   };
 
   return (
-    <section className="bg-[#111111] w-full px-4 md:px-8 lg:px-16 xl:px-36 py-4">
-      <TabsHeader />
+    <section className="bg-[#111111] w-full px-4 md:px-8 lg:px-16 xl:px-36 py-24">
+      <TitleSection 
+        title='Workflow'
+      />
       <Description />
-      <div className="mt-20 md:mt-16 mb-10">
+      <div className="mt-20 md:mt-20 mb-10">
         <div className="block md:hidden">
           <MobileStep 
             icon={EnergyIcon} 
@@ -63,7 +68,7 @@ export default function TabsSection() {
           />
         </div>
         <div className="hidden md:block">
-          <Tabs.Root value={activeTab} onValueChange={handleTabChange} orientation="vertical">
+          <Tabs.Root defaultValue={'kickoff'} onValueChange={handleTabChange} orientation="vertical">
             <Tabs.List className="flex flex-col md:flex-row md:space-x-4 md:border-b-2 border-[#434343]">
               <TabItem value="kickoff" icon={EnergyIcon} label="Kickoff" />
               <TabItem value="discovery" icon={MagnifyingGlassIcon} label="Discovery" />
@@ -74,7 +79,7 @@ export default function TabsSection() {
             <Tabs.Content value="kickoff">
               <TabsContent 
                 title="Começando o seu projeto" 
-                description="Aqui começa seu projeto com a s4S. Neste primeiro momento iremos alinhar todas as informações já discutidas, apresentar nosso entendimento, aprofundar nos pensamentos do cliente e alinhar as expectativas." 
+                description={<div>Aqui começa seu projeto com a <strong>s4S</strong>. Neste primeiro momento iremos alinhar todas as informações já discutidas, apresentar nosso entendimento, aprofundar nos pensamentos do cliente e alinhar as expectativas.</div>}
               />
             </Tabs.Content>
             <Tabs.Content value="discovery">
@@ -108,7 +113,7 @@ export default function TabsSection() {
         <Link href="/contactForm">
           <button className="hidden md:flex items-center gap-2 bg-[#FF9700] rounded-3xl py-2 px-4 mb-20">
             <p className="text-[#1F1F1F] font-semibold">Iniciar projeto</p>
-            <img src="/start-project-icon.svg" alt="" />
+            <LinkArrowIcon />
           </button>
         </Link>
       </div>
