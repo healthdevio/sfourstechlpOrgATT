@@ -21,7 +21,7 @@ export default function HomeScreen() {
             </div>
             <div className="pt-[80px]">
                 <div className="text-center">
-                    <h1 className="font-WorkSans text-[100px] font-medium leading-[120px]">
+                    <h1 className="font-WorkSans text-[100px] font-medium leading-[120px] text-[#FFFF]">
                         <Typewriter
                             words={[
                                 'Realize suas ideias.',

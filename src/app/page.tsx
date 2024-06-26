@@ -71,7 +71,7 @@ export default function Home() {
           <AboutSection />
         </div>
         <div id="cases" ref={casesRef}>
-          <PartnersProjects />
+          <PartnersProjects />  
         </div>
         <div id="ourServices" ref={ourServicesRef}>
           <OurServicesSection />
