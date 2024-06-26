@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import 'tailwindcss/tailwind.css';
 import { CardDeposition, CardDepositionProps } from './depositions/CardDeposition';
 import sarahmendesImage from '@/assets/images/deposition-cards/sarahmendes-sesa.jpeg';
 import { CardAvatarProps } from './depositions/CardAvatar';
