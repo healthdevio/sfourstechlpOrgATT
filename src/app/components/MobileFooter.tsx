@@ -10,7 +10,7 @@ import iconSocialImageIn from "@/../public/in-icon.svg"
 const MobileFooter: React.FC = () => {
   return (
     <div>
-      <div className='w-full border-t border-[#232323] px-10 py-11'>
+      <div className='w-full border-t bg-[#232323] border-[#232323] px-10 py-11'>
         <div className='flex'>
           <Image
             src={footerLogoImage}
