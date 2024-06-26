@@ -32,7 +32,7 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({ home }) => {
   }, [animateOut]);
 
   return (
-    <div className='w-full fixed z-50'>
+    <div className='w-full fixed z-50 top-0'>
       <div className='w-full flex px-7 justify-between items-center h-20 md:border-b bg-[#121214] border-[#232323]'>
         <Link href='/'>
           <Image
