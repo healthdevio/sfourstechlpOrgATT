@@ -57,7 +57,7 @@ export default function Home() {
         <Header />
       </div>
       <div className='xs:block md:hidden'>
-        <MobileHeader />
+        <MobileHeader home />
       </div>
       <div className='xs:block md:hidden'>
         <HomeScreenMobile />
