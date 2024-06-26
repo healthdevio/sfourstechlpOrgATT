@@ -213,7 +213,7 @@ const ContactForm: React.FC = () => {
                             <SelectItem
                               key={index}
                               value={time.label}
-                              className='hover:bg-white/10 cursor-pointer p-2 rounded-lg transition-colors duration-100'
+                              className='text-white hover:bg-white/10 cursor-pointer p-2 rounded-lg transition-colors duration-100'
                             >
                               <p>{time.label}</p>
                             </SelectItem>
@@ -245,7 +245,7 @@ const ContactForm: React.FC = () => {
                             <SelectItem
                               key={index}
                               value={time.label}
-                              className='hover:bg-white/10 cursor-pointer p-2 rounded-lg transition-colors duration-100'
+                              className='text-white hover:bg-white/10 cursor-pointer p-2 rounded-lg transition-colors duration-100'
                             >
                               <p>{time.label}</p>
                             </SelectItem>
@@ -342,8 +342,8 @@ const ContactForm: React.FC = () => {
                           <SelectItem
                             key={index}
                             value={time.label}
-                            className='hover:bg-white/10 cursor-pointer p-2 rounded-lg transition-colors duration-100'
-                          >
+                            className='text-white hover:bg-white/10 cursor-pointer p-2 rounded-lg transition-colors duration-100'
+                            >
                             <p>{time.label}</p>
                           </SelectItem>
                         ))
@@ -374,8 +374,8 @@ const ContactForm: React.FC = () => {
                           <SelectItem
                             key={index}
                             value={time.label}
-                            className='hover:bg-white/10 cursor-pointer p-2 rounded-lg transition-colors duration-100'
-                          >
+                            className='text-white hover:bg-white/10 cursor-pointer p-2 rounded-lg transition-colors duration-100'
+                            >
                             <p>{time.label}</p>
                           </SelectItem>
                         ))
