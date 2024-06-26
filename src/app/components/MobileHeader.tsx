@@ -4,6 +4,7 @@ import { MenuIcon, X } from 'lucide-react';
 import { LinkArrowIcon } from '../components/icons/LinkArrowIcon';
 import Image from 'next/image';
 import Link from 'next/link';
+import Icon4S from '@/app/favicon.ico'
 
 type MobileHeaderProps = {
   home?: boolean;
@@ -36,10 +37,10 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({ home }) => {
       <div className='w-full flex px-7 justify-between items-center h-20 md:border-b bg-[#121214] border-[#232323]'>
         <Link href='/'>
           <Image
-            width={90}
+            width={35}
             height={0}
             alt='S4s nossa tecnologia está nas pessoas'
-            src={logo}
+            src={Icon4S}
           />
         </Link>
         <button onClick={toggleMenu}>

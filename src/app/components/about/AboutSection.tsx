@@ -48,7 +48,7 @@ export function AboutSection() {
                     href={'#'}
                 >
                     <PlayIcon color="#FF9700" />
-                    <div>Video Institucional</div>
+                    <div className="text-white">Video Institucional</div>
                 </Link>
             </div>
         </section>
