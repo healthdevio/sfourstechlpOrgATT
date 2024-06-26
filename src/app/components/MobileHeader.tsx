@@ -29,7 +29,7 @@ const MobileHeader: React.FC = () => {
 
   return (
     <div className='w-full'>
-      <div className='w-full flex px-7 justify-between items-center h-20 border-b bg-[#121214] border-[#232323]'>
+      <div className='w-full flex px-7 justify-between items-center h-20 md:border-b bg-[#121214] border-[#232323]'>
         <Link href='/'>
           <Image
             width={90}
@@ -45,21 +45,21 @@ const MobileHeader: React.FC = () => {
 
       {headerIsOpened && (
         <div className={`w-full py-16 px-12 absolute flex flex-col items-center justify-center bg-[#121214] ${animateOut ? 'slide-up-animation' : 'slide-down-animation'}`}>
-          <div className='flex text-center flex-col gap-5'>
+          <div className='flex text-center text-base font-medium flex-col gap-5 text-[#AAAAAA]'>
             <Link href='/'>
-              <p>Inicio</p>
+              <div>Inicio</div>
             </Link>
             <Link href='/?scrollTo=Us'>
-              <p>Quem somos</p>
+              <div>Quem somos</div>
             </Link>
             <Link href='/?scrollTo=cases'>
-              <p>Cases</p>
+              <div>Cases</div>
             </Link>
             <Link href='/?scrollTo=ourServices'>
-              <p>Serviços</p>
+              <div>Serviços</div>
             </Link>
             <Link href='/?scrollTo=workflow'>
-              <p>Workfow</p>
+              <div>Workfow</div>
             </Link>
           </div>
 
@@ -67,7 +67,7 @@ const MobileHeader: React.FC = () => {
             <Link
               className='flex gap-4'
               href='/contactForm'>
-              <p className='text-[#1F1F1F] text-xl font-medium'>Iniciar projeto</p>
+              <p className='text-[#1F1F1F] text-xl font-semibold'>Iniciar projeto</p>
               <LinkArrowIcon />
             </Link>
           </button>

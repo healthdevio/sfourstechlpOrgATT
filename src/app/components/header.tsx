@@ -21,7 +21,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full py-9 px-24 bg-black text-white flex items-center justify-between border-b-[1px] border-[#222222] z-50">
+    <header className="fixed top-0 left-0 w-full py-9 px-24 bg-[#111111] text-white flex items-center justify-between border-b-[1px] border-[#222222] z-50">
       <div className="flex items-center">
         <Image
           className="ml-[30px] pb-[5px] pt-[5px]"
