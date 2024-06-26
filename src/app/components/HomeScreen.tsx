@@ -1,3 +1,4 @@
+import { Typewriter } from 'react-simple-typewriter';
 import Image from 'next/image'
 import arrow2 from '@/assets/arrow-2.svg'
 import { PlayIcon } from './icons/PlayIcon';
@@ -7,7 +8,7 @@ import Link from 'next/link';
 
 export default function HomeScreen() {
     return (
-        <div className="pt-[165px] pb-20" style={{ backgroundImage: `url(${LopeerBg.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="pt-[165px] pb-20 bg-[#111111]" style={{ backgroundImage: `url(${LopeerBg.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className="flex justify-center items-center">
                 <div className="border-[1px] border-[#222222] rounded-full pt-[16px] pb-[16px] pl-[6px] pr-[80px] text-center">
                     <span className="text-base/[16px] text-center font-semibold text-[#1F1F1F] bg-[#E19322] rounded-full pt-[12px] pb-[12px] pl-[34px] pr-[34px] font-WorkSans">Olá!</span>
@@ -16,7 +17,25 @@ export default function HomeScreen() {
             </div>
             <div className="pt-[80px]">
                 <div className="text-center">
-                    <h1 className="font-WorkSans text-[100px] font-medium leading-[120px]">Transforme <span className="text-[#FF9700] font-semibold">sua</span> <br /> <span className="text-[#FF9700] font-medium">idea</span> em realidade.</h1>
+                    <h1 className="font-WorkSans text-[100px] font-medium leading-[120px]">
+                        <Typewriter
+                            words={[
+                                'Realize suas ideias.',
+                                'Inove, transforme, cresça.',
+                                'Tecnologia para sucesso.',
+                                'Soluções que inspiram.',
+                                'Ágil e eficiente.',
+                                'Ideias com precisão.',
+                                'Visão, código, inovação.',
+                                'Conectando ideias, resultados.',
+                            ]}
+                            loop={0}
+                            cursor
+                            typeSpeed={90}
+                            deleteSpeed={70}
+                            delaySpeed={5500}
+                        />
+                    </h1>
                 </div>
                 <div className="text-center pt-[32px]">
                     <span className="font-WorkSans text-[24px] leading-[36px] text-[#E4E4E4]">Somos fábrica de software de alta velocidade. Da ideia ao MVP,<br /> oferecemos agilidade e tecnologia dentro do orçamento.</span>
