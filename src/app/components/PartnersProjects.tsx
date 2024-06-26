@@ -119,7 +119,7 @@ const PartnersProjects: React.FC = () => {
       name: "Invest Plus",
       description: "Através de nossa plataforma, estamos dando acesso a um mercado que há poucos anos era restrito a grandes fundos.",
       thumbnail: InvestPlusThumbnail,
-      partnerPage: "https://www.creace.org.br/",
+      partnerPage: "https://investplus.vc/",
       tags: [
         {
           nameTag: "Desenvolvimento",
