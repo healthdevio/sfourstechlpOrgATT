@@ -1,5 +1,3 @@
-import rectangleImage from '@/../public/rectangle.svg'
-import Image from 'next/image'
 import { ServicesList } from './ServicesList'
 import itConsultingImage from '@/assets/images/services/ti-consulting.png'
 import uxuiImage from '@/assets/images/services/uxui-design.png'

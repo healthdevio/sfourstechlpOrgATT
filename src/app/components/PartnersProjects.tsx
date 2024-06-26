@@ -121,9 +121,21 @@ const PartnersProjects: React.FC = () => {
   }
 
   return (
-    <div className='w-full h-full bg-black'>
-      <div className='w-full flex flex-col px-24 mb-24 mt-10 border-t border-[#232323] xs:hidden md:block'>
-        <div className='w-full flex items-center mb-20 mt-10 justify-between'>
+    <div className='w-full h-full bg-[#111111] pb-14 md:pb-24'>
+      <div className='w-full flex flex-col px-24 xs:hidden md:block'>
+        <div className='pt-[56px] pb-16'>
+          <TitleSection title='Cases' />
+          <div className='flex justify-between items-center'>
+            <h1 className='text-[22px]/[33px] font-semibold font-WorkSans'>Transformando ideias em <br /> realidade.</h1>
+            <div className='flex items-center'>
+              <div className='flex items-center text-[14px]/[21px] font-normal font-WorkSans text-right text-[#909090]'>
+                Designers e desenvolvedores trabalhando lado a lado para <br />
+                entregarmos um projeto mais eficiente e completo!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='w-full flex items-center mb-20 justify-between'>
           <div className='cursor-pointer' onClick={() => scrollProjects('left')}>
             <GrayArrowIcon />
           </div>
@@ -185,10 +197,10 @@ const PartnersProjects: React.FC = () => {
         </div>
       </div>
 
-      <div className='w-full flex flex-col px-6 mb-24  mt-10 bg-black xs:block md:hidden'>
+      <div className='w-full flex flex-col px-6 mb-24 bg-[#111111] xs:block md:hidden'>
         <div className='pt-[56px]'>
-          <TitleSection title='Cases'/>
-          <h1 className='text-[22px]/[33px] font-semibold font-WorkSans'>Transformando ideias <br/> em realidade.</h1>
+          <TitleSection title='Cases' />
+          <h1 className='text-[22px]/[33px] font-semibold font-WorkSans'>Transformando ideias <br /> em realidade.</h1>
           <div className='pb-[56px] pt-[24px]'>
             <span className='text-[14px]/[21px] font-normal font-WorkSans text-[#909090]'>Designers e desenvolvedores trabalhando lado a lado para entregarmos um projeto mais eficiente e completo!</span>
           </div>
