@@ -10,6 +10,7 @@ import Image from 'next/image';
 import GrayArrowIcon from './icons/grayArrow';
 import YellowArrowIcon from './icons/yellowArrow';
 import Link from 'next/link';
+import { TitleSection } from './TitleSection';
 
 const PartnersProjects: React.FC = () => {
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -185,6 +186,13 @@ const PartnersProjects: React.FC = () => {
       </div>
 
       <div className='w-full flex flex-col px-6 mb-24  mt-10 bg-black xs:block md:hidden'>
+        <div className='pt-[56px]'>
+          <TitleSection title='Cases'/>
+          <h1 className='text-[22px]/[33px] font-semibold font-WorkSans'>Transformando ideias <br/> em realidade.</h1>
+          <div className='pb-[56px] pt-[24px]'>
+            <span className='text-[14px]/[21px] font-normal font-WorkSans text-[#909090]'>Designers e desenvolvedores trabalhando lado a lado para entregarmos um projeto mais eficiente e completo!</span>
+          </div>
+        </div>
         <div className='w-full flex gap-10 overflow-x-auto'>
           {
             projects.map((project, index) => (

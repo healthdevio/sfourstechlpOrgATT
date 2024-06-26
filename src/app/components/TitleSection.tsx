@@ -8,7 +8,7 @@ interface Props {
 
 export function TitleSection({ title }: Props) {
     return (
-        <div className='flex uppercase mb-11 text-base font-semibold gap-5'>
+        <div className='flex uppercase mb-11 text-base font-WorkSans font-semibold gap-5'>
             <Image
                 className="hidden md:block"
                 src={rectangleImage}
