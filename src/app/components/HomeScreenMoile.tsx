@@ -4,6 +4,8 @@ import { PlayIcon } from './icons/PlayIcon';
 import { LinkArrowIcon } from './icons/LinkArrowIcon';
 import LopeerBg from '@/assets/looperbg.svg'
 import Link from 'next/link';
+import { Typewriter } from 'react-simple-typewriter';
+
 
 const HomeScreenMobile: React.FC = () => {
     return(
@@ -16,7 +18,23 @@ const HomeScreenMobile: React.FC = () => {
         </div>
         <div className="pt-[84px]">
             <div className="text-center">
-                <h1 className="font-WorkSans text-[36px]/[43px] font-medium">Transforme <span className="text-[#FF9700] font-semibold">sua</span> <span className="text-[#FF9700] font-medium">idea</span> em realidade.</h1>
+                <h1 className="font-WorkSans text-[36px]/[43px] font-medium">
+                    <Typewriter
+                                words={[
+                                    'Realize suas ideias.',
+                                    'Inove, transforme, cresça.',
+                                    'Tecnologia para sucesso.',
+                                    'Soluções que inspiram.',
+                                    'Ágil e eficiente.',
+                                    'Visão, código, inovação.'
+                                ]}
+                                loop={0}
+                                cursor
+                                typeSpeed={90}
+                                deleteSpeed={70}
+                                delaySpeed={5500}
+                            />
+                </h1>
             </div>
             <div className="text-center pt-[32px]">
                 <span className="font-WorkSans text-[14px] font-light leading-[21px] text-[#E4E4E4]">Somos fábrica de software de alta velocidade.<br /> Da ideia ao MVP, oferecemos agilidade e tecnologia dentro do orçamento.</span>
