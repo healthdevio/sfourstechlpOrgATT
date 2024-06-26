@@ -43,7 +43,7 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({ home }) => {
           />
         </Link>
         <button onClick={toggleMenu}>
-          {headerIsOpened ? <X /> : <MenuIcon />}
+          {headerIsOpened ? <X color="#FFFFFF" /> : <MenuIcon color="#FFFFFF" />}
         </button>
       </div>
 
@@ -66,7 +66,7 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({ home }) => {
             </Link>
             <Link
               href={home ? '/#workflow' : '/?scrollTo=workflow'}>
-              <p>Workfow</p>
+              <p>Workflow</p>
             </Link>
           </div>
 

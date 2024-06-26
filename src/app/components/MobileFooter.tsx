@@ -59,7 +59,7 @@ const MobileFooter: React.FC = () => {
         </div>
 
         <div className='mt-12 flex flex-col gap-4'>
-          <h1>Sobre</h1>
+          <h1 className='text-[#FFFF]'>Sobre</h1>
           <p className='text-[#A8A8B3]'>Startup para Statups</p>
           <p className='text-[#A8A8B3]'>O que fazemos</p>
           <p className='text-[#A8A8B3]'>Cases</p>
@@ -67,17 +67,17 @@ const MobileFooter: React.FC = () => {
         </div>
 
         <div className='mt-12 flex flex-col gap-4'>
-          <h1>Acessoria</h1>
+          <h1 className='text-[#FFFF]'>Acessoria</h1>
           <p className='text-[#A8A8B3]'>E-mail: contato@healthdev.io</p>
         </div>
 
         <div className='mt-12 flex flex-col gap-4'>
-          <h1>Telefone/WhastAPP</h1>
+          <h1 className='text-[#FFFF]'>Telefone/WhastAPP</h1>
           <p className='text-[#A8A8B3]'>+55 85 99954-7116</p>
         </div>
 
         <div className='mt-12 flex flex-col gap-4'>
-          <h1>Endereço</h1>
+          <h1 className='text-[#FFFF]'>Endereço</h1>
           <p className='text-[#A8A8B3]'>Avenida Dom Luís, 176, Mezanino - Aldeota</p>
         </div>
       </div>
