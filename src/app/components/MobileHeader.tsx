@@ -5,7 +5,11 @@ import { LinkArrowIcon } from '../components/icons/LinkArrowIcon';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const MobileHeader: React.FC = () => {
+type MobileHeaderProps = {
+  home?: boolean;
+}
+
+const MobileHeader: React.FC<MobileHeaderProps> = ({ home }) => {
   const [headerIsOpened, setHeaderIsOpened] = useState<boolean>(false);
   const [animateOut, setAnimateOut] = useState<boolean>(false);
 
@@ -28,7 +32,7 @@ const MobileHeader: React.FC = () => {
   }, [animateOut]);
 
   return (
-    <div className='w-full'>
+    <div className='w-full fixed z-50'>
       <div className='w-full flex px-7 justify-between items-center h-20 border-b bg-[#121214] border-[#232323]'>
         <Link href='/'>
           <Image
@@ -49,16 +53,19 @@ const MobileHeader: React.FC = () => {
             <Link href='/'>
               <p>Inicio</p>
             </Link>
-            <Link href='/?scrollTo=Us'>
+            <Link href={home ? '/#nos' : '/?scrollTo=Us'}>
               <p>Quem somos</p>
             </Link>
-            <Link href='/?scrollTo=cases'>
+            <Link
+              href={home ? '/#cases' : '/?scrollTo=cases'}>
               <p>Cases</p>
             </Link>
-            <Link href='/?scrollTo=ourServices'>
+            <Link
+              href={home ? '/#ourServices' : '/?scrollTo=ourServices'}>
               <p>Serviços</p>
             </Link>
-            <Link href='/?scrollTo=workflow'>
+            <Link
+              href={home ? '/#workflow' : '/?scrollTo=workflow'}>
               <p>Workfow</p>
             </Link>
           </div>
