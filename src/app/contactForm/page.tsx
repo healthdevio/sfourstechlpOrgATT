@@ -66,6 +66,17 @@ const ContactForm: React.FC = () => {
         project_development_time: projectDevelopmentTime,
         message: projectDescription,
       }, '0GGNCQMZt2YTxATct')
+
+      emailJs.send('service_f51bo06', 'template_8podvdi', {
+        from_name: clientName,
+        from_email: clientEmail,
+        from_phone: clientPhone,
+        from_company: clientCompany,
+        project_stage: projectStage,
+        project_development_time: projectDevelopmentTime,
+        message: projectDescription,
+      }, '0GGNCQMZt2YTxATct')
+
       toast.success('Formulário enviado com sucesso');
       setClientName('')
       setClientEmail('')
@@ -282,7 +293,7 @@ const ContactForm: React.FC = () => {
       </div>
       <div className='xs:block md:hidden'>
         <MobileHeader />
-        <div className='w-full h-sreen flex flex-col pb-8 px-0 bg-[#121214]'>
+        <div className='w-full h-sreen flex mt-14 flex-col pb-8 px-0 bg-[#121214]'>
           <div className='w-full mt-16 px-6'>
             <h1 className='mb-10'>Informações para contato</h1>
             <div className='w-full flex flex-col gap-6'>
