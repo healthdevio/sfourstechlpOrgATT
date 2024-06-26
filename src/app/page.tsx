@@ -51,7 +51,6 @@ export default function Home() {
     };
   }, []);
 
-
   return (
     <div className="scroll-smooth">
       <div className='xs:hidden md:block'>
@@ -71,9 +70,9 @@ export default function Home() {
         <div id="nos" ref={usRef}>
           <AboutSection />
         </div>
-        <div id="cases" ref={casesRef}>
+        {/* <div id="cases" ref={casesRef}>
           <PartnersProjects />
-        </div>
+        </div> */}
         <div id="ourServices" ref={ourServicesRef}>
           <OurServicesSection />
         </div>

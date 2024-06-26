@@ -9,7 +9,7 @@ export interface CardAvatarProps {
 
 export function CardAvatar({ image, name, role }: CardAvatarProps) {
     return (
-        <div className="relative flex gap-4">
+        <div className="relative w-full flex gap-4">
             <div className="flex overflow-hidden rounded-full">
                 <Image
                     width={56}
