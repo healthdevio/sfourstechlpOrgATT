@@ -2,34 +2,29 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Life from '@/assets/4life.svg';
-import atheva from "@/assets/atheva.svg";
-import fcj from '@/assets/fcj.svg';
-import fiibo from '@/assets/fiibo.svg';
-import knola from '@/assets/knola.svg';
-import totalCross from '@/assets/totalcross.svg';
-import liv from '@/assets/livsaude.svg';
-import topyou from '@/assets/top2you.svg';
-import byteme from '@/assets/byteme.svg';
-import inside from '@/assets/insideout2.svg';
-import Crea from '@/assets/Logo CREA.png';
-import invest from '@/assets/Invest.png';
-import mpro from '@/assets/mpro.png';
-
+import ClinicaSIm from '@/assets/imagensCarrousel/clinicasim.png'
+import Crea from '@/assets/imagensCarrousel/crea.png'
+import DoctClin from '@/assets/imagensCarrousel/doctclin.png'
+import Elege from '@/assets/imagensCarrousel/elege.br.png'
+import Fibo from '@/assets/imagensCarrousel/fiibo.png'
+import Icc from '@/assets/imagensCarrousel/icc.png'
+import InvestPlus from '@/assets/imagensCarrousel/investplus.png'
+import LivSaude from '@/assets/imagensCarrousel/livsaude.png'
+import Mpro from '@/assets/imagensCarrousel/mpro.png'
+import SaudeHD from '@/assets/imagensCarrousel/saudehd.png'
+ 
 export function CarrouselPartne() {
     const images = [
-        Life,
-        atheva,
-        fcj,
-        fiibo,
-        knola,
-        totalCross,
-        topyou,
-        byteme,
-        inside,
+        ClinicaSIm,
         Crea,
-        invest,
-        mpro
+        DoctClin,
+        Elege,
+        Fibo,
+        Icc,
+        InvestPlus,
+        LivSaude,
+        Mpro,
+        SaudeHD
     ];
 
     return (
@@ -53,7 +48,7 @@ export function CarrouselPartne() {
                     animation-play-state: paused;
                 }
                 .flex-none {
-                    min-width: 170px;
+                    min-width: 160px;
                 }
             `}</style>
             <div className="carousel">
