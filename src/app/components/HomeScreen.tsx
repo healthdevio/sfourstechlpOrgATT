@@ -1,3 +1,4 @@
+import { Typewriter } from 'react-simple-typewriter';
 import Image from 'next/image'
 import arrow2 from '@/assets/arrow-2.svg'
 import { PlayIcon } from './icons/PlayIcon';
@@ -16,7 +17,25 @@ export default function HomeScreen() {
             </div>
             <div className="pt-[80px]">
                 <div className="text-center">
-                    <h1 className="font-WorkSans text-[100px] font-medium leading-[120px]">Transforme <span className="text-[#FF9700] font-semibold">sua</span> <br /> <span className="text-[#FF9700] font-medium">idea</span> em realidade.</h1>
+                    <h1 className="font-WorkSans text-[100px] font-medium leading-[120px]">
+                        <Typewriter
+                            words={[
+                                'Realize suas ideias.',
+                                'Inove, transforme, cresça.',
+                                'Tecnologia para sucesso.',
+                                'Soluções que inspiram.',
+                                'Ágil e eficiente.',
+                                'Ideias com precisão.',
+                                'Visão, código, inovação.',
+                                'Conectando ideias, resultados.',
+                            ]}
+                            loop={0}
+                            cursor
+                            typeSpeed={90}
+                            deleteSpeed={70}
+                            delaySpeed={5500}
+                        />
+                    </h1>
                 </div>
                 <div className="text-center pt-[32px]">
                     <span className="font-WorkSans text-[24px] leading-[36px] text-[#E4E4E4]">Somos fábrica de software de alta velocidade. Da ideia ao MVP,<br /> oferecemos agilidade e tecnologia dentro do orçamento.</span>
