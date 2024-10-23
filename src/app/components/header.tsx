@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '@/assets/logos4s-svg.svg';
+import { whatsAppLink } from '@/utils/whatsappLink';
 
 export default function Header() {
   const [activeRoute, setActiveRoute] = useState('');
@@ -48,10 +49,10 @@ export default function Header() {
           <a className={`${getLinkClass('/#workflow')} font-WorkSans text-base cursor-pointer`} onClick={() => handleLinkClick('/#workflow')}>Workflow</a>
         </Link>
       </nav>
-      <Link href="/contactForm" legacyBehavior>
-        <a className="bg-yellowbutton text-[#1F1F1F] text-base font-medium rounded-full font-WorkSans" style={{ borderRadius: '100px', padding: '8px 24px', gap: '10px' }}>
+      <Link href={whatsAppLink}>
+        <span className="bg-yellowbutton text-[#1F1F1F] text-base font-medium rounded-full font-WorkSans" style={{ borderRadius: '100px', padding: '8px 24px', gap: '10px' }}>
           Iniciar Projeto
-        </a>
+        </span>
       </Link>
     </header>
   );

@@ -20,7 +20,7 @@ const MobileFooter: React.FC = () => {
           <h1 className='text-[#A8A8B3] text-base ml-6'>Startup para <br />Startups</h1>
         </div>
 
-        <p className='mt-8 text-[#A8A8B3]'>s4S 2020</p>
+        <p className='mt-8 text-[#A8A8B3]'>s4S {new Date().getFullYear()}</p>
         <p className='text-[#A8A8B3]'>Todos os direitos reservados</p>
 
         <div className="flex gap-6 mt-8">

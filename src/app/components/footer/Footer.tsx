@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="font-WorkSans">
-          s4S 2020 <br />
+          s4S {new Date().getFullYear()} <br />
           Todos os direitos reservados
         </div>
         <div className="flex gap-6">

@@ -5,6 +5,7 @@ import { LinkArrowIcon } from '../components/icons/LinkArrowIcon';
 import Image from 'next/image';
 import Link from 'next/link';
 import Icon4S from '@/app/favicon.ico'
+import { whatsAppLink } from '@/utils/whatsappLink';
 
 type MobileHeaderProps = {
   home?: boolean;
@@ -74,7 +75,7 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({ home }) => {
           <button className='w-full flex items-center justify-center mt-12 h-14 gap-4 bg-[#E19322] rounded-full'>
             <Link
               className='flex gap-4'
-              href='/contactForm'>
+              href={whatsAppLink}>
               <p className='text-[#1F1F1F] text-xl font-semibold'>Iniciar projeto</p>
               <LinkArrowIcon />
             </Link>

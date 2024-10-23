@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { LinkArrowIcon } from "../icons/LinkArrowIcon";
 import Link from "next/link";
+import { whatsAppLink } from "@/utils/whatsappLink";
 
 export interface CardServicesProps {
     image: any
@@ -28,7 +29,7 @@ export function CardServices({ description, image, code, link, title }: CardServ
                     {description}
                 </div>
                     <Link
-                    href="/contactForm"
+                    href={whatsAppLink}
                     className="flex mr-auto items-center py-4 md:py-2- px-6 bg-yellowbutton text-base font-semibold text-[#1F1F1F] rounded-full gap-4"
                     >
                         Iniciar projeto <LinkArrowIcon />

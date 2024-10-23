@@ -5,6 +5,7 @@ import { LinkArrowIcon } from './icons/LinkArrowIcon';
 import LopeerBg from '@/assets/looperbg.svg'
 import Link from 'next/link';
 import { Typewriter } from 'react-simple-typewriter';
+import { whatsAppLink } from '@/utils/whatsappLink';
 
 
 const HomeScreenMobile: React.FC = () => {
@@ -46,7 +47,7 @@ const HomeScreenMobile: React.FC = () => {
             </div>
             <div className="pt-[56px]">
                 <div className="flex flex-col justify-center items-center gap-4 ">
-                    <Link className="py-[15px] px-[10px] rounded-full flex items-center space-x-2" href="/contactForm">
+                    <Link className="py-[15px] px-[10px] rounded-full flex items-center space-x-2" href={whatsAppLink}>
                         <span className="font-WorkSans text-[14px]/[14px] text-[#1F1F1F] bg-yellowbutton leading-[14px] xs:text-nowrap font-medium px-[101px] rounded-full flex space-x-2 py-[14px] hover:bg-[#FF9700] transition-colors duration-300">
                             Iniciar projeto
                             <div className="ml-[16px]">

@@ -16,6 +16,7 @@ import { TitleSection } from '../TitleSection'
 import startProjectIcon from '@/../public/start-project-icon.svg'
 import Image from 'next/image';
 import { LinkArrowIcon } from '../icons/LinkArrowIcon';
+import { whatsAppLink } from '@/utils/whatsappLink';
 
 export default function TabsSection() {
   const [activeTab, setActiveTab] = useState('kickoff');
@@ -111,7 +112,7 @@ export default function TabsSection() {
         </div>
       </div>
       <div>
-        <Link href="/contactForm">
+        <Link href={whatsAppLink}>
           <button className="hidden md:flex items-center gap-2 bg-[#FF9700] rounded-3xl py-2 px-4 mb-20">
             <p className="text-[#1F1F1F] font-semibold">Iniciar projeto</p>
             <LinkArrowIcon />

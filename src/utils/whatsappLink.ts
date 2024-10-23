@@ -1,0 +1,1 @@
+export const whatsAppLink = 'https://api.whatsapp.com/send?phone=5585999547116&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20para%20iniciar%20um%20projeto!'
