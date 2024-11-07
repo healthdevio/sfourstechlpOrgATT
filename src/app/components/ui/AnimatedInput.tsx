@@ -22,7 +22,7 @@ export const AnimatedInput = () => {
       <input
         ref={inputRef} 
         type="text"
-        placeholder="Em que podemos ajudar?"
+        placeholder="Entre em contato direto conosco!"
         className="peer pl-20 focus:pl-4 pr-4 focus:pr-20 py-2 border border-[#E19322] rounded-full w-full focus:outline-none focus:border-[#E19322] transition-all bg-transparent"
         onFocus={handleFocus}
         onBlur={handleBlur}
